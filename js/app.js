@@ -99,17 +99,19 @@
       (!pref || s.pref === pref) &&
       (!minUnits || unitsOf(s) >= minUnits) &&
       (!extra || (extra === "store" && s.precision === "store") || (extra === "unknown" && isUnknown(s)) || (extra === "closing" && s.closing)));
-    current = q ? base.filter(s => s._key.includes(q)) : base;
+    // 地図のピンは絞り込み条件（地方・台数など）だけで決め、検索語では減らさない。検索結果は一覧とズームに使う
+    const matched = q ? base.filter(s => s._key.includes(q)) : base;
+    const mapKey = [region, pref, minUnits, extra].join("|");
 
     placeReq++;  // 実行中の地名検索の結果は使わない
     distances = null;
-    if (!current.length && q.length >= 2) {
-      showStores(base, []);  // 地図には周辺の店舗も見えるよう、検索語以外の条件だけで表示しておく
-      searchPlace(raw, base);
+    if (!matched.length && q.length >= 2) {
+      showStores(base, [], mapKey);
+      searchPlace(raw, base, mapKey);
       return;
     }
     clearPlace();
-    showStores(current, current);
+    showStores(base, matched, mapKey);
     if (fit && current.length) {
       const b = L.latLngBounds(current.map(s => [s.lat, s.lng]));
       map.fitBounds(b, fitOptions(15));
@@ -124,9 +126,13 @@
     return { paddingTopLeft: [pad, pad], paddingBottomRight: [pad, pad + covered], maxZoom };
   }
 
-  function showStores(onMap, inList) {
-    cluster.clearLayers();
-    cluster.addLayers(onMap.map(s => markers.get(s.id)));
+  let shownMapKey = null;
+  function showStores(onMap, inList, mapKey) {
+    if (mapKey !== shownMapKey) {  // 条件が変わったときだけピンを入れ替える（検索の入力ごとに作り直さない）
+      cluster.clearLayers();
+      cluster.addLayers(onMap.map(s => markers.get(s.id)));
+      shownMapKey = mapKey;
+    }
     current = inList;
     $("count").textContent = current.length.toLocaleString();
     $("unitsTotal").textContent = current.reduce((a, s) => a + unitsOf(s), 0).toLocaleString();
@@ -161,7 +167,7 @@
     return placeCache.get(q);
   }
 
-  async function searchPlace(raw, base) {
+  async function searchPlace(raw, base, mapKey) {
     const req = placeReq;
     clearPlace();
     setNote(`「${esc(raw)}」を含む店舗はありません。地名として検索中…`);
@@ -181,7 +187,7 @@
     const near = base.map(s => ({ s, d: map.distance(place.ll, [s.lat, s.lng]) / 1000 }))
       .filter(x => x.d <= NEARBY_KM).sort((a, b) => a.d - b.d).slice(0, NEARBY_MAX);
     distances = new Map(near.map(x => [x.s.id, x.d]));
-    showStores(base, near.map(x => x.s));
+    showStores(base, near.map(x => x.s), mapKey);
     setNote(`「${esc(raw)}」を含む店舗はありません。<br>地名「<b>${esc(place.title)}</b>」から ${NEARBY_KM}km 以内の店舗を近い順に表示しています。`);
 
     placeMarker = L.marker(place.ll, {
@@ -230,6 +236,15 @@
   });
 
   let t;
+  // 検索欄の × ボタン: 検索語を消して一覧を元に戻す（地図の位置はそのまま）
+  const syncClear = () => { $("qClear").hidden = !$("q").value; };
+  $("qClear").addEventListener("click", () => {
+    clearTimeout(t);
+    $("q").value = "";
+    syncClear();
+    apply(false);
+  });
+  $("q").addEventListener("input", syncClear);
   $("q").addEventListener("input", () => {
     clearTimeout(t);
     t = setTimeout(() => {

@@ -2,7 +2,7 @@
   "name": "taiko-map-app",
   "version": "1.0.0",
   "private": true,
-  "description": "太鼓の達人 設置店舗マップの Android アプリ（Capacitor）",
+  "description": "Gamap（太鼓の達人 設置店舗マップ）の Android アプリ（Capacitor）",
   "scripts": {
     "icons": "python3 scripts/make-icons.py",
     "copy": "node scripts/copy-web.mjs",

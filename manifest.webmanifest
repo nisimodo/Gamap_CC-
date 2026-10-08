@@ -1,6 +1,6 @@
 {
-  "name": "太鼓の達人 設置店舗マップ",
-  "short_name": "太鼓マップ",
+  "name": "Gamap",
+  "short_name": "Gamap",
   "description": "太鼓の達人の設置店舗と筐体情報を地図で確認できます",
   "lang": "ja",
   "start_url": "./",

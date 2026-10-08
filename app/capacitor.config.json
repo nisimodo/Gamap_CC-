@@ -1,6 +1,6 @@
 {
   "appId": "io.github.taikomap",
-  "appName": "太鼓マップ",
+  "appName": "Gamap",
   "webDir": "www",
   "android": {
     "allowMixedContent": false

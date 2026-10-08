@@ -34,10 +34,9 @@ body {
 }
 .brand { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
 .brand h1 { font-size: 18px; margin: 0; letter-spacing: .02em; }
-.don {
-  width: 26px; height: 26px; border-radius: 50%;
-  background: radial-gradient(circle at 50% 50%, #fff 0 34%, var(--don-dark) 35% 46%, #fff 47% 100%);
-  border: 2px solid #fff;
+.brand-icon {
+  width: 30px; height: 30px; border-radius: 7px; display: block;
+  box-shadow: 0 0 0 1.5px rgba(255, 255, 255, .85);
 }
 .search { flex: 1; max-width: 460px; margin-left: auto; }
 .search input {

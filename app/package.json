@@ -1,0 +1,20 @@
+{
+  "name": "taiko-map-app",
+  "version": "1.0.0",
+  "private": true,
+  "description": "太鼓の達人 設置店舗マップの Android アプリ（Capacitor）",
+  "scripts": {
+    "icons": "python3 scripts/make-icons.py",
+    "copy": "node scripts/copy-web.mjs",
+    "sync": "npm run copy && npx cap sync android",
+    "build:apk": "npm run sync && cd android && ./gradlew assembleDebug && cp app/build/outputs/apk/debug/app-debug.apk ../taiko-map.apk"
+  },
+  "dependencies": {
+    "@capacitor/android": "7.6.9",
+    "@capacitor/core": "7.6.9",
+    "@capacitor/geolocation": "7.1.8"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "7.6.9"
+  }
+}

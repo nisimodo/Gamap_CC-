@@ -1,0 +1,17 @@
+{
+  "name": "太鼓の達人 設置店舗マップ",
+  "short_name": "太鼓マップ",
+  "description": "太鼓の達人の設置店舗と筐体情報を地図で確認できます",
+  "lang": "ja",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#fffaf3",
+  "theme_color": "#e8442e",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

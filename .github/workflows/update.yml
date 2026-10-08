@@ -1,0 +1,39 @@
+name: 店舗データを自動更新
+
+on:
+  schedule:
+    - cron: "0 */3 * * *"   # 3 時間ごと（UTC）
+  workflow_dispatch:         # Actions 画面から手動実行もできる
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-data
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: OneDrive から取得して変換
+        run: python3 tools/update.py
+
+      - name: 変更があればコミット
+        run: |
+          git add data/stores.js tools/source_state.json tools/geocode_cache.json
+          if git diff --cached --quiet; then
+            echo "変更なし"
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
+            git commit -m "店舗データを更新 ($(date -u +%Y-%m-%dT%H:%MZ))"
+            git push
+          fi

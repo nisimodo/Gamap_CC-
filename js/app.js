@@ -381,6 +381,26 @@
   }
   apply(false);
 
+  // ---------- Android アプリの更新確認 ----------
+  // 起動時に公開サイトの apk/version.json を見て、新しい版があれば更新するか確認し、APK をダウンロードする
+  const UPDATE_INFO_URL = "https://nisimodo.github.io/Gamap_CC-/apk/version.json";
+  async function checkAppUpdate() {
+    const AppPlugin = window.Capacitor?.isNativePlatform?.() && window.Capacitor.Plugins?.App;
+    if (!AppPlugin) return;
+    try {
+      const [info, latest] = await Promise.all([
+        AppPlugin.getInfo(),
+        fetch(`${UPDATE_INFO_URL}?t=${Date.now()}`, { cache: "no-store" }).then(r => r.ok ? r.json() : null),
+      ]);
+      if (!latest || Number(latest.versionCode) <= Number(info.build)) return;
+      const msg = `新しいバージョン ${latest.versionName} があります（現在 ${info.version}）。\n`
+        + (latest.notes ? `\n${latest.notes}\n` : "")
+        + "\n更新しますか？\n（ダウンロード後、通知またはファイルから開いてインストールしてください）";
+      if (confirm(msg)) window.open(new URL(latest.apk, UPDATE_INFO_URL).href, "_blank");
+    } catch { /* オフラインなどで確認できないときは何もしない */ }
+  }
+  checkAppUpdate();
+
   // ホーム画面に追加したときのオフライン対応（Android アプリ内では不要）
   if ("serviceWorker" in navigator && window.isSecureContext && !window.Capacitor?.isNativePlatform?.()) {
     navigator.serviceWorker.register("sw.js").catch(() => {});

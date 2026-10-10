@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gamap Android アプリ</title>
+  <link rel="icon" type="image/png" href="../icons/favicon-32.png">
+  <style>
+    :root { --don: #e8442e; --text: #2b2420; --muted: #7a6e66; --bg: #fffaf3; }
+    body { font-family: "Hiragino Sans", "Noto Sans JP", sans-serif; background: var(--bg); color: var(--text); margin: 0; padding: 40px 16px; text-align: center; }
+    img { width: 96px; height: 96px; border-radius: 22px; box-shadow: 0 2px 10px rgba(0, 0, 0, .15); }
+    h1 { font-size: 24px; margin: 16px 0 4px; }
+    .ver { color: var(--muted); font-size: 14px; }
+    .btn { display: inline-block; margin-top: 20px; padding: 16px 28px; background: var(--don); color: #fff; border-radius: 999px; text-decoration: none; font-size: 18px; font-weight: 700; }
+    .notes { max-width: 420px; margin: 20px auto 0; font-size: 14px; line-height: 1.7; }
+    p.help { max-width: 420px; margin: 24px auto 0; font-size: 13px; color: var(--muted); line-height: 1.8; }
+    a.site { color: var(--don); }
+  </style>
+</head>
+<body>
+  <img src="../icons/icon-192.png" alt="">
+  <h1>Gamap</h1>
+  <div class="ver" id="ver">Android アプリ</div>
+  <a class="btn" href="gamap.apk" download>APK をダウンロード</a>
+  <div class="notes" id="notes"></div>
+  <p class="help">
+    ダウンロード後、通知またはファイルアプリから開いてインストールしてください。「提供元不明のアプリ」の許可を求められたら許可してください。<br>
+    インストール後は、アプリを開いたときに新しいバージョンがあれば更新を案内します。<br>
+    iPhone の方は <a class="site" href="../">Web 版</a> を Safari で開き、「ホーム画面に追加」してください。
+  </p>
+  <script>
+    fetch("version.json", { cache: "no-store" }).then(r => r.json()).then(v => {
+      document.getElementById("ver").textContent = `Android アプリ　バージョン ${v.versionName}（${v.released}）`;
+      document.getElementById("notes").textContent = v.notes || "";
+    }).catch(() => {});
+  </script>
+</body>
+</html>

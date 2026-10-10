@@ -7,10 +7,12 @@
     "icons": "python3 scripts/make-icons.py",
     "copy": "node scripts/copy-web.mjs",
     "sync": "npm run copy && npx cap sync android",
-    "build:apk": "npm run sync && cd android && ./gradlew assembleDebug && cp app/build/outputs/apk/debug/app-debug.apk ../taiko-map.apk"
+    "build:apk": "npm run sync && cd android && ./gradlew assembleDebug && cp app/build/outputs/apk/debug/app-debug.apk ../taiko-map.apk",
+    "release": "npm run build:apk && node scripts/release.mjs"
   },
   "dependencies": {
     "@capacitor/android": "7.6.9",
+    "@capacitor/app": "7.1.2",
     "@capacitor/core": "7.6.9",
     "@capacitor/geolocation": "7.1.8"
   },

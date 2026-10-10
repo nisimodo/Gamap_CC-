@@ -1,7 +1,7 @@
 // オフラインでも前回のデータで開けるようにするサービスワーカー
 // 画面のファイル・ライブラリはキャッシュを優先し、裏で新しいものに更新する。
 // 店舗データ (data/stores.js) はネットワークを優先し、つながらないときだけキャッシュを使う。
-const VERSION = "v7";
+const VERSION = "v8";
 const APP_CACHE = `app-${VERSION}`;
 const TILE_CACHE = "tiles";
 const TILE_LIMIT = 800;  // 地図画像は見た範囲を最大この枚数まで保存
@@ -64,6 +64,7 @@ self.addEventListener("fetch", e => {
   const req = e.request;
   if (req.method !== "GET") return;
   const url = new URL(req.url);
+  if (url.origin === location.origin && url.pathname.includes("/apk/")) return;  // APK 配布は常にネットワークから
   if (url.origin === location.origin) {
     if (url.pathname.endsWith("/data/stores.js") || req.mode === "navigate") e.respondWith(networkFirst(req));
     else e.respondWith(staleWhileRevalidate(req));

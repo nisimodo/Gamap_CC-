@@ -54,7 +54,7 @@
       ${s.osmName ? `<div class="osm-msg">地図上の位置: OpenStreetMap「${esc(s.osmName)}」</div>` : ""}
       <div class="links">
         <a href="https://www.google.com/maps/search/?api=1&query=${q}" target="_blank" rel="noopener">Googleマップで探す</a>
-        <a class="sub" href="https://www.openstreetmap.org/search?query=${q}" target="_blank" rel="noopener">OSM</a>
+        <a class="sub" href="https://www.openstreetmap.org/?mlat=${s.lat}&mlon=${s.lng}#map=${s.precision === "city" ? 15 : 18}/${s.lat}/${s.lng}" target="_blank" rel="noopener" title="この位置を OpenStreetMap で開く">OpenStreetMap</a>
       </div>
     </div>`;
   }

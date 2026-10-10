@@ -46,6 +46,9 @@
       <div class="serials">${serials}</div>
       ${notes.length ? `<div class="notes">${notes.join("")}</div>` : ""}
       ${s.precision === "city" ? '<div class="approx-msg">※ 店舗の正確な位置が取得できなかったため、市区町村付近に表示しています</div>' : ""}
+      ${s.precision === "area" ? `<div class="approx-msg">※ 店舗名の地名から、${esc(s.locNote)}に表示しています（正確な位置ではありません）</div>` : ""}
+      ${s.precision === "station" ? `<div class="osm-msg">地図上の位置: ${esc(s.locNote)}（店舗名から推定）</div>` : ""}
+      ${s.farFromCity ? `<div class="approx-msg">※ 元データの市区町村（${esc(s.city + s.town)}）から離れた場所です。店舗名の地名をもとに表示しています</div>` : ""}
       ${s.osmName ? `<div class="osm-msg">地図上の位置: OpenStreetMap「${esc(s.osmName)}」</div>` : ""}
       <div class="links">
         <a href="https://www.google.com/maps/search/?api=1&query=${q}" target="_blank" rel="noopener">Googleマップで探す</a>
@@ -56,7 +59,7 @@
 
   function iconFor(s) {
     const cls = ["pin"];
-    if (s.precision === "city") cls.push("approx");
+    if (s.precision === "city" || s.precision === "area") cls.push("approx");
     if (isUnknown(s)) cls.push("unknown");
     if (s.closing) cls.push("closing");
     const n = unitsOf(s);
@@ -155,16 +158,53 @@
     $("placeNote").hidden = false;
   }
 
+  // 駅の一覧（data/stations.js）は地名検索を初めて使うときに読み込む
+  let stationsPromise = null;
+  function loadStations() {
+    stationsPromise ||= new Promise(resolve => {
+      const el = document.createElement("script");
+      el.src = "data/stations.js";
+      el.onload = () => resolve(window.TAIKO_STATIONS || []);
+      el.onerror = () => { stationsPromise = null; resolve([]); };
+      document.head.appendChild(el);
+    });
+    return stationsPromise;
+  }
+
+  // 1. 駅名（OpenStreetMap の駅一覧）  2. 地名・住所（国土地理院）  3. その他の場所（OpenStreetMap Nominatim）の順に探す
   async function lookupPlace(q) {
-    if (!placeCache.has(q)) {
+    if (placeCache.has(q)) return placeCache.get(q);
+    const key = norm(q).replace(/駅$/, "");
+    let place = null;
+
+    const stations = (await loadStations()).filter(st => norm(st[0]) === key);
+    if (stations.length) {
+      // 同じ名前の駅が複数あるときは、いま見ている地図の中心に近いもの
+      const c = map.getCenter();
+      const st = stations.reduce((a, b) => map.distance(c, [a[1], a[2]]) <= map.distance(c, [b[1], b[2]]) ? a : b);
+      place = { title: `${st[0]}駅${st[3] ? `（${st[3]}）` : ""}`, ll: [st[1], st[2]] };
+    }
+
+    if (!place) {
       const res = await fetch("https://msearch.gsi.go.jp/address-search/AddressSearch?q=" + encodeURIComponent(q));
       if (!res.ok) throw new Error(res.status);
-      const list = await res.json();
+      // 検索語を含まない結果（「東行田」で「札幌市東区」など、一部の文字だけ一致したもの）は使わない
+      const list = (await res.json()).filter(x => norm(x.properties.title).includes(key));
       // 「東京都渋谷区恵比寿」のような住所形式の結果を優先（「恵比寿岩」などの地物より）
       const best = list.find(x => PREF_RE.test(x.properties.title)) || list[0];
-      placeCache.set(q, best ? { title: best.properties.title, ll: [best.geometry.coordinates[1], best.geometry.coordinates[0]] } : null);
+      if (best) place = { title: best.properties.title, ll: [best.geometry.coordinates[1], best.geometry.coordinates[0]] };
     }
-    return placeCache.get(q);
+
+    if (!place) {
+      try {
+        const res = await fetch("https://nominatim.openstreetmap.org/search?format=jsonv2&countrycodes=jp&limit=1&accept-language=ja&q=" + encodeURIComponent(q));
+        const [hit] = res.ok ? await res.json() : [];
+        if (hit) place = { title: hit.display_name.split(",").slice(0, 3).map(x => x.trim()).join(" "), ll: [+hit.lat, +hit.lon] };
+      } catch { /* つながらなければ見つからなかった扱い */ }
+    }
+
+    placeCache.set(q, place);
+    return place;
   }
 
   async function searchPlace(raw, base, mapKey) {

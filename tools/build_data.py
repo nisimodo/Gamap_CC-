@@ -295,6 +295,131 @@ def match_store(s, index, center):
 ARCADE_KINDS = {"amusement_arcade", "bowling_alley", "games", "video_games"}
 
 
+# ---------- 店舗名の地名から位置を推定（OSM の施設が見つからなかった店舗用） ----------
+# 例: 「GiGO 赤羽駅前」→ 赤羽駅、「モーリーファンタジー南砂」→ 江東区南砂
+# Excel の市区町村欄が誤っている店舗（赤羽駅前なのに港区など）も、店舗名の地名の位置に置ける
+STATIONS_PATH = ROOT / "tools" / "osm_stations.json"
+STATIONS_JS = ROOT / "data" / "stations.js"
+NAME_GUESS_KM = 40  # 市区町村の代表点からこの距離以内の駅・地名だけ採用
+TOWN_NEAR_KM = 8    # 別の市区町村の町名は、この距離以内（東京23区の隣の区など）のときだけ採用
+STATION_RESIDUES = {"", "駅", "駅前", "前", "東口", "西口", "南口", "北口", "中央口",
+                    "駅東口", "駅西口", "駅南口", "駅北口", "駅中央口", "駅ビル", "駅南", "駅北", "駅東", "駅西"}
+
+
+def load_stations(refresh=False):
+    """全国の駅 [[駅名, 緯度, 経度, [事業者...]], ...]（tools/osm_stations.json にキャッシュ）"""
+    if STATIONS_PATH.exists() and not refresh:
+        return json.loads(STATIONS_PATH.read_text("utf-8"))
+    query = ('[out:json][timeout:900];area["ISO3166-1"="JP"][admin_level=2]->.jp;'
+             '(node["railway"~"^(station|halt)$"]["name"](area.jp););out body;')
+    print("  Overpass から駅を取得中…")
+    d = fetch_json(OVERPASS_URL, query, timeout=1000)
+    out, seen = [], {}
+    for e in d["elements"]:
+        t = e["tags"]
+        name = (t.get("name:ja") or t["name"]).strip()
+        lat, lon = round(e["lat"], 5), round(e["lon"], 5)
+        for la, lo, i in seen.get(name, []):  # 路線ごとに別の点があるので 1.5km 以内の同名駅はまとめる
+            if abs(la - lat) < 0.015 and abs(lo - lon) < 0.015:
+                if t.get("operator") and t["operator"] not in out[i][3]:
+                    out[i][3].append(t["operator"])
+                break
+        else:
+            seen.setdefault(name, []).append((lat, lon, len(out)))
+            out.append([name, lat, lon, [t["operator"]] if t.get("operator") else []])
+    STATIONS_PATH.write_text(json.dumps(out, ensure_ascii=False, separators=(",", ":")), "utf-8")
+    return out
+
+
+def core_name(name):
+    """ブランド名・「ゲームコーナー」などを外した、店舗名の地名部分（正規化済み）"""
+    n = re.sub(r"[（(].*?[)）]", "", name).strip()
+    for b in sorted(BRANDS + EXTRA_BRANDS, key=len, reverse=True):
+        if n.startswith(b) and len(n) > len(b):
+            n = n[len(b):].strip(" 　・")
+            break
+    for suf in SUFFIXES:
+        if n.endswith(suf) and len(n) > len(suf):
+            n = n[: -len(suf)].strip()
+            break
+    return norm(n)
+
+
+# BRANDS（OSM 照合用）に加えて、地名推定のときだけ外すブランド名
+EXTRA_BRANDS = ["アミューズメントスペース", "ゲームセンター", "プレイランド", "ゲームランド", "ゲームプラザ", "シルクハット",
+                "キャッツアイ", "東京レジャーランド", "レジャーランド", "ユーズランド", "ウェアハウス", "NICOPA", "ニコパ",
+                "あそびパーク", "ふぇすたらんど", "テクモピア", "キャロット", "ラクガキ王国", "パラディッソ", "スーパージャンボ"]
+
+
+def guess_station(core, center, station_index):
+    """店舗名の地名部分が「駅名＋駅前／東口など」なら、その駅の位置"""
+    best = None
+    for k in range(len(core), 1, -1):
+        prefix, residue = core[:k], core[k:]
+        if residue not in STATION_RESIDUES:
+            continue
+        for st in station_index.get(prefix, ()):
+            d = haversine(center, (st[1], st[2]))
+            if d <= NAME_GUESS_KM and (best is None or d < best[0]):
+                best = (d, st)
+        if best:
+            return best[1]
+    return None
+
+
+def gsi_places(q, cache):
+    """国土地理院 住所検索の結果 [[名称, 緯度, 経度], ...]（キャッシュ付き）"""
+    key = "gsi:" + q
+    if key not in cache:
+        try:
+            data = fetch_json("https://msearch.gsi.go.jp/address-search/AddressSearch?q=" + urllib.parse.quote(q))
+            time.sleep(0.2)
+        except Exception as e:
+            print("  GSI error", q, e)
+            return []
+        cache[key] = [[x["properties"]["title"], x["geometry"]["coordinates"][1], x["geometry"]["coordinates"][0]] for x in data]
+    return cache[key] or []
+
+
+def names_other_city(core, s, cache):
+    """店舗名の地名が、Excel の市区町村とは別の市町村の名前か（「アピナ宇都宮」が上三川町にある場合など）。
+    その場合は地域名として付けられた店名なので、駅名・町名からの推定に使わない"""
+    if not re.search(r"[一-龥ぁ-んァ-ン]", core):
+        return False
+    own = norm(s["city"] + s["town"])
+    for title, _, _ in gsi_places(core, cache):
+        m = re.fullmatch(re.escape(s["pref"]) + r"(?:.+郡)?(.+[市町村])", title)
+        if m and norm(m.group(1)).removesuffix("市").removesuffix("町").removesuffix("村") == core \
+                and norm(m.group(1)) not in own:
+            return True
+    return False
+
+
+def names_own_city(core, s):
+    """店舗名の地名が、その店舗の市区町村名そのものか（「ラウンドワン浜松」が浜松市にある場合など）。
+    市の名前を付けただけで駅前とは限らないので、駅・町名からの推定に使わない"""
+    own = norm(s["city"] + s["town"])
+    return any(core + suf in own for suf in ("市", "町", "村", "区"))
+
+
+def guess_town(core, s, center, cache):
+    """店舗名の地名部分が町名なら、その位置（国土地理院 住所検索）。
+    同じ市区町村の中か、Excel の市区町村の代表点から TOWN_NEAR_KM 以内のものだけ使う"""
+    if len(core) < 2 or not re.search(r"[一-龥]", core):
+        return None
+    best = None
+    for title, lat, lon in gsi_places(core, cache):
+        t = re.sub(r"[一二三四五六七八九十〇]+丁目$", "", title)
+        if not (t.startswith(s["pref"]) and norm(t).endswith(core)):
+            continue
+        d = haversine(center, (lat, lon))
+        same_city = norm(t).startswith(norm(s["pref"] + s["city"]))
+        if (same_city and d <= NAME_GUESS_KM) or d <= TOWN_NEAR_KM:
+            if best is None or d < best[0]:
+                best = (d, title, lat, lon)
+    return best[1:] if best else None
+
+
 _last_nominatim = [0.0]
 
 
@@ -333,16 +458,17 @@ def nominatim_pick(results, center):
 
 
 def spread(stores):
-    """同じ市区町村の代表点に置いた店舗が重ならないよう、らせん状に少しずらす"""
+    """同じ点（市区町村の代表点・駅など）に置いた店舗が重ならないよう、らせん状に少しずらす"""
     groups = {}
     for s in stores:
-        if s["precision"] == "city" and s["lat"] is not None:
+        if s["precision"] != "store" and s["lat"] is not None:
             groups.setdefault((s["lat"], s["lng"]), []).append(s)
     for (lat, lng), members in groups.items():
         if len(members) == 1:
             continue
+        step = 0.004 if members[0]["precision"] == "city" else 0.0012  # 駅・町名付近はあまり離さない
         for i, s in enumerate(members):
-            r = 0.004 * math.sqrt(i + 1)
+            r = step * math.sqrt(i + 1)
             a = i * 2.39996  # 黄金角
             s["lat"] = round(lat + r * math.cos(a), 6)
             s["lng"] = round(lng + r * math.sin(a) / math.cos(math.radians(lat)), 6)
@@ -377,6 +503,11 @@ def main():
 
     print("店舗の位置を照合中（OpenStreetMap）…")
     index = PoiIndex(load_osm("--refresh-osm" in sys.argv))
+    stations = load_stations("--refresh-osm" in sys.argv)
+    station_index = {}
+    for st in stations:
+        station_index.setdefault(norm(st[0]), []).append(st)
+    suspicious = []
     for i, s in enumerate(stores, 1):
         center = centers[s["pref"] + s["city"] + s["town"]]
         pos, prec, matched = center, "city", None
@@ -391,12 +522,38 @@ def main():
                     break
             if i % 25 == 0:
                 save_cache()
+        if prec == "city" and center:
+            core = core_name(s["name"])
+            skip = names_own_city(core, s) or names_other_city(core, s, cache)
+            st = None if skip else guess_station(core, center, station_index)
+            if st:
+                pos, prec = [st[1], st[2]], "station"
+                s["locNote"] = f"{st[0]}駅付近"
+            else:
+                town = None if skip else guess_town(core, s, center, cache)
+                if town:
+                    pos, prec = [town[1], town[2]], "area"
+                    s["locNote"] = f"{town[0].removeprefix(s['pref'])}付近"
+            if i % 50 == 0:
+                save_cache()
         s["lat"], s["lng"] = (round(pos[0], 6), round(pos[1], 6)) if pos else (None, None)
         s["precision"] = prec
         if matched and matched != s["name"]:
             s["osmName"] = matched
+        # Excel の市区町村から大きく離れた位置になった店舗（市区町村欄の誤りの可能性）
+        if prec in ("station", "area") and center and haversine(center, pos) > 8:
+            s["farFromCity"] = True
+            suspicious.append(f"{s['name']}（Excel: {s['pref']}{s['city']}{s['town']} → {s['locNote']}）")
     save_cache()
     spread(stores)
+    STATIONS_JS.write_text("window.TAIKO_STATIONS = " + json.dumps(
+        [[n, la, lo, "・".join(ops[:2])] for n, la, lo, ops in stations], ensure_ascii=False, separators=(",", ":")) + ";\n", "utf-8")
+    counts = {p: sum(1 for x in stores if x["precision"] == p) for p in ("store", "station", "area", "city")}
+    print(f"位置: 施設 {counts['store']} / 駅 {counts['station']} / 町名 {counts['area']} / 市区町村 {counts['city']}")
+    if suspicious:
+        print(f"Excel の市区町村と店舗名の地名が離れている店舗 ({len(suspicious)}):")
+        for x in suspicious:
+            print("  " + x)
 
     news, section = [], ""
     for row in sheets.get("開店・閉店", []):
@@ -424,8 +581,7 @@ def main():
     }
     OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     OUT_PATH.write_text("window.TAIKO_DATA = " + json.dumps(payload, ensure_ascii=False, separators=(",", ":")) + ";\n", "utf-8")
-    n_store = sum(1 for s in stores if s["precision"] == "store")
-    print(f"完了: {OUT_PATH}  店舗位置 {n_store} / 市区町村代表点 {len(stores) - n_store}")
+    print(f"完了: {OUT_PATH}")
 
 
 if __name__ == "__main__":

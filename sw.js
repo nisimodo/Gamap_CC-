@@ -1,7 +1,7 @@
 // オフラインでも前回のデータで開けるようにするサービスワーカー
 // 画面のファイル・ライブラリはキャッシュを優先し、裏で新しいものに更新する。
 // 店舗データ (data/stores.js) はネットワークを優先し、つながらないときだけキャッシュを使う。
-const VERSION = "v4";
+const VERSION = "v6";
 const APP_CACHE = `app-${VERSION}`;
 const TILE_CACHE = "tiles";
 const TILE_LIMIT = 800;  // 地図画像は見た範囲を最大この枚数まで保存

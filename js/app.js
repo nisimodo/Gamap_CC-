@@ -91,7 +91,8 @@
   for (const s of stores) s._key = norm([s.name, s.pref, s.city, s.town, ...s.serials].join(" "));
 
   let current = [];
-  let distances = null;  // 地名検索中のみ: 店舗 id → 地点からの距離 (km)
+  let distances = null;  // 店舗 id → 距離 (km)。地名検索では地点から、ヒットが少ないときはヒットした店舗からの距離
+  let distPrefix = "";
   function apply(fit) {
     const raw = $("q").value.trim();
     const q = norm(raw);
@@ -114,7 +115,19 @@
       return;
     }
     clearPlace();
-    showStores(base, matched, mapKey);
+    if (q && matched.length < MIN_RESULTS) {
+      // ヒットが少ないときは、ヒットした店舗の近くの店舗も加えて MIN_RESULTS 件にする
+      const hit = new Set(matched.map(s => s.id));
+      const extra = base.filter(s => !hit.has(s.id))
+        .map(s => ({ s, d: Math.min(...matched.map(m => map.distance([m.lat, m.lng], [s.lat, s.lng]))) / 1000 }))
+        .sort((a, b) => a.d - b.d).slice(0, MIN_RESULTS - matched.length);
+      distances = new Map(extra.map(x => [x.s.id, x.d]));
+      distPrefix = "近く ";
+      showStores(base, [...matched, ...extra.map(x => x.s)], mapKey);
+      if (extra.length) setNote(`「${esc(raw)}」に一致する店舗は ${matched.length} 件です。<br>近くの店舗を合わせて ${current.length} 件表示しています。`);
+    } else {
+      showStores(base, matched, mapKey);
+    }
     if (fit && current.length) {
       const b = L.latLngBounds(current.map(s => [s.lat, s.lng]));
       map.fitBounds(b, fitOptions(15));
@@ -143,7 +156,7 @@
   }
 
   // ---------- 地名検索：店舗名で見つからないとき、国土地理院の地名検索（無料・キー不要）で場所へ移動 ----------
-  const NEARBY_KM = 10, NEARBY_MAX = 50;
+  const NEARBY_KM = 10, NEARBY_MAX = 50, MIN_RESULTS = 10;
   const PREF_RE = /^(北海道|東京都|大阪府|京都府|.{2,3}県)/;
   const placeCache = new Map();
   let placeReq = 0, placeMarker = null;
@@ -224,11 +237,14 @@
       return;
     }
 
-    const near = base.map(s => ({ s, d: map.distance(place.ll, [s.lat, s.lng]) / 1000 }))
-      .filter(x => x.d <= NEARBY_KM).sort((a, b) => a.d - b.d).slice(0, NEARBY_MAX);
+    // 地点から NEARBY_KM 以内の店舗（最大 NEARBY_MAX 件）。少なければ距離に関係なく近い順に MIN_RESULTS 件
+    const sorted = base.map(s => ({ s, d: map.distance(place.ll, [s.lat, s.lng]) / 1000 })).sort((a, b) => a.d - b.d);
+    const within = sorted.filter(x => x.d <= NEARBY_KM).slice(0, NEARBY_MAX);
+    const near = within.length >= MIN_RESULTS ? within : sorted.slice(0, MIN_RESULTS);
     distances = new Map(near.map(x => [x.s.id, x.d]));
+    distPrefix = "";
     showStores(base, near.map(x => x.s), mapKey);
-    setNote(`「${esc(raw)}」を含む店舗はありません。<br>地名「<b>${esc(place.title)}</b>」から ${NEARBY_KM}km 以内の店舗を近い順に表示しています。`);
+    setNote(`「${esc(raw)}」を含む店舗はありません。<br>地名「<b>${esc(place.title)}</b>」から${within.length >= MIN_RESULTS ? ` ${NEARBY_KM}km 以内の店舗を近い順に` : `近い順に ${near.length} 店舗を`}表示しています。`);
 
     placeMarker = L.marker(place.ll, {
       icon: L.divIcon({ className: "", html: '<div class="place-pin"></div>', iconSize: [22, 22], iconAnchor: [11, 22] }),
@@ -243,7 +259,7 @@
     const km = d => d < 1 ? `${Math.round(d * 1000)}m` : `${d.toFixed(1)}km`;
     const items = current.slice(0, LIST_LIMIT).map(s =>
       `<li data-id="${s.id}"><span class="name">${esc(s.name)}</span><span class="units">${unitsOf(s) || "?"}台</span>
-       <span class="meta">${distances ? `<b class="dist">${km(distances.get(s.id))}</b>・` : ""}${esc(addr(s))}・${esc(s.price || "料金?")}／${esc(s.songs || "曲数?")}${s.closing ? "・閉店予定" : ""}</span></li>`);
+       <span class="meta">${distances?.has(s.id) ? `<b class="dist">${distPrefix}${km(distances.get(s.id))}</b>・` : ""}${esc(addr(s))}・${esc(s.price || "料金?")}／${esc(s.songs || "曲数?")}${s.closing ? "・閉店予定" : ""}</span></li>`);
     if (current.length > LIST_LIMIT) items.push(`<li class="more">他 ${current.length - LIST_LIMIT} 件（絞り込むと表示されます）</li>`);
     if (!current.length) items.push('<li class="more">該当する店舗がありません</li>');
     $("list").innerHTML = items.join("");

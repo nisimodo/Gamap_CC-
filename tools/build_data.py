@@ -578,7 +578,7 @@ def main():
     muni = load_muni()
     corrections = {k: v for k, v in json.loads(CORRECTIONS_PATH.read_text("utf-8")).items() if not k.startswith("_")} \
         if CORRECTIONS_PATH.exists() else {}
-    unknown = [k for k in corrections if k not in {x["name"] for x in stores}]
+    unknown = [k for k in corrections if k.split("@")[0] not in {x["name"] for x in stores}]
     if unknown:
         print("手動修正に Excel に無い店舗名があります:", "、".join(unknown))
     station_index = {}
@@ -613,7 +613,8 @@ def main():
                     s["locNote"] = f"{town[0].removeprefix(s['pref'])}付近"
             if i % 50 == 0:
                 save_cache()
-        corr = corrections.get(s["name"])
+        # 同じ名前の店舗が複数あるときは「店舗名@都道府県」で区別できる
+        corr = corrections.get(f"{s['name']}@{s['pref']}") or corrections.get(s["name"])
         if corr:
             fixed = apply_correction(s, corr, center, station_index, cache)
             if fixed:

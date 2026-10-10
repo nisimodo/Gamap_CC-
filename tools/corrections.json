@@ -1,9 +1,9 @@
 {
   "_説明": "店舗の位置を手動で直す設定です。キーは Excel の店舗名と完全に同じにします。{\"address\": \"住所\"} でその住所、{\"station\": \"駅名\"} でその駅の付近、{\"lat\": 緯度, \"lng\": 経度} でその地点に置きます。note は地図のポップアップに出る説明、source は情報源、memo はメモです。 同じ名前の店舗が複数あるときは、キーを「店舗名@都道府県」にします。",
   "アミューズメントスペースASO:VIBA！": {
-    "station": "恵比寿",
-    "note": "恵比寿駅付近",
-    "memo": "利用者からの情報（2026-10-10）。店舗名に地名がなく、渋谷区の中心付近に仮置きされていた"
+    "address": "東京都渋谷区恵比寿1-10-5 三恵エビスビル4F",
+    "source": "https://www.hotpepper.jp/strJ000006449/",
+    "memo": "Web検索で調査（2026-10-10）"
   },
   "世田谷オークラボウル": {
     "address": "東京都世田谷区桜3-24-1 オークラランド",
@@ -11183,5 +11183,520 @@
     "address": "沖縄県うるま市塩屋502-1 MEGAドン・キホーテうるま店内",
     "source": "https://w.atwiki.jp/taiko13/pages/57.html",
     "memo": "太鼓の達人 設置店情報 Wiki（atwiki）: MECHAうるま店"
+  },
+  "アピナ新千歳空港": {
+    "address": "北海道千歳市美々987-22 新千歳空港ターミナルビル",
+    "source": "https://rurubu.jp/andmore/spot/80001097",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "VEGAGIO美しが丘": {
+    "address": "北海道札幌市清田区美しが丘1条7-6-10",
+    "source": "https://www.p-world.co.jp/hokkaido/vegas-utukushigaoka.htm",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "ソユーゲームフィールド青森": {
+    "address": "青森県青森市浜田1-14-1 シーナシーナ青森2F",
+    "source": "https://gamerch.com/maimai/533567",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "秋田OPAアミューズパーク": {
+    "address": "秋田県秋田市千秋久保田町4-2 秋田OPA B1F",
+    "source": "https://iko-yo.net/facilities/93187",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "ファミリーランドあそびのくにベイシア矢板": {
+    "address": "栃木県矢板市末広町25-1 ベイシアタウン矢板店",
+    "source": "https://www.tochinavi.net/spot/home/?id=12565",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "ハローズガーデン伊勢崎東 (GiGO MEGAドン・キホーテUNY伊勢崎東)": {
+    "address": "群馬県伊勢崎市三室町5330 MEGAドン・キホーテUNY伊勢崎東店",
+    "source": "https://www.pref.gunma.jp/uploaded/attachment/679628.pdf",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "ハローズガーデン前橋": {
+    "address": "群馬県前橋市小屋原町472-1 ガーデン前橋",
+    "source": "https://map.yahoo.co.jp/v3/place/4j2R--8SYhE/review",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "ベイシア渋川店あそびのくに": {
+    "address": "群馬県渋川市行幸田296 ベイシア渋川店",
+    "source": "https://www.mapion.co.jp/phonebook/M02002CL33/",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "ベイシア月夜野モール店あそびのくに": {
+    "address": "群馬県利根郡みなかみ町下牧482 ベイシア月夜野店",
+    "source": "https://jp.indeed.com/q-%e3%83%99%e3%82%a4%e3%82%b7%e3%82%a2%e3%80%80%e6%9c%88%e5%a4%9c%e9%87%8e%e5%ba%97-%e6%b1%82%e4%ba%ba.html",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "アミューズメントPLABIダイエー西浦和": {
+    "address": "埼玉県さいたま市桜区田島5-18-15 ダイエー西浦和店",
+    "source": "https://www.pref.saitama.lg.jp/saitama-wassyoi/buy/support/2389.html",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "ファミリーランドあそびのくにカインズ鶴ヶ島": {
+    "address": "埼玉県鶴ヶ島市三ツ木奥仲580-1 カインズ鶴ヶ島店",
+    "source": "https://www.navitime.co.jp/category/0301/11241/",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "ベイシア栗橋": {
+    "address": "埼玉県久喜市栗橋東6-15-1 ベイシア栗橋店",
+    "source": "https://www.navitime.co.jp/category/0206/08542/",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "ベイシア滑川モール店あそびのくに": {
+    "address": "埼玉県比企郡滑川町羽尾2780 ベイシアなめがわモール店",
+    "source": "https://www.navitime.co.jp/category/0202/11341/",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "イトーヨーカドーアリオ亀有": {
+    "address": "東京都葛飾区亀有3-49-3 アリオ亀有",
+    "source": "https://w.atwiki.jp/taiko13/pages/59.html",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "namcoイオンレイクタウンmori北": {
+    "address": "埼玉県越谷市レイクタウン3-1-1 イオンレイクタウンmori",
+    "source": "https://rurubu.jp/andmore/spot/80008907",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "namcoレイクタウンmori中央": {
+    "address": "埼玉県越谷市レイクタウン3-1-1 イオンレイクタウンmori",
+    "source": "https://rurubu.jp/andmore/spot/80008907",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "ファミリーランドあそびのくに大網白里": {
+    "address": "千葉県大網白里市大網273-2 ベイシア大網白里店",
+    "source": "https://www.mapion.co.jp/phonebook/M02002CL33/2.html",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "メルヘンランドアミリー大網": {
+    "address": "千葉県大網白里市みやこ野1-1-1 ショッピングセンターアミリィ",
+    "source": "https://www.navitime.co.jp/category/0701/12239/",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "ラウンドワンスタジアムアリオ柏": {
+    "address": "千葉県柏市大島田1-6-1 アリオ柏",
+    "source": "https://iko-yo.net/experiences/93240",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "タイトーステーション新宿歌舞伎町": {
+    "address": "東京都新宿区歌舞伎町1-23-1",
+    "source": "https://prtimes.jp/main/html/rd/p/000000781.000041970.html",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "イトーヨーカドー多摩センター": {
+    "address": "東京都多摩市落合1-44 イトーヨーカドー多摩センター店",
+    "source": "https://www.otakaraya.jp/gold/shop/tokyo/tama_shi/",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "ゲームパラダイス東京サマーランド": {
+    "address": "東京都あきる野市上代継600 東京サマーランド",
+    "source": "https://www.nap-camp.com/mag/spot/102113",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "アミューズメントパークジアス上大岡": {
+    "address": "神奈川県横浜市港南区上大岡西2-1-12 赤い風船ビル",
+    "source": "https://p-town.dmm.com/shops/kanagawa/12171",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "イトーヨーカドーグランツリー武蔵小杉": {
+    "address": "神奈川県川崎市中原区新丸子東3-1135-1 グランツリー武蔵小杉",
+    "source": "https://www.mec-h.com/town/mh-musashikosugi/122",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "イトーヨーカドーららぽーと横浜店２Ｆゲームコーナー": {
+    "address": "神奈川県横浜市都筑区池辺町4035-1 ららぽーと横浜",
+    "source": "https://iko-yo.net/facilities/2026",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "ヴィスポ横須賀ゲームコーナー": {
+    "address": "神奈川県横須賀市平成町2-14-1 ヴィスポ横須賀",
+    "source": "https://mapfan.com/genres/22/14/201",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "カプコミクスみなとみらい": {
+    "address": "神奈川県横浜市西区みなとみらい3-5-1 MARK IS みなとみらい 4F",
+    "source": "https://iko-yo.net/facilities/187563",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "さがみ湖リゾートプレジャーフォレスト": {
+    "address": "神奈川県相模原市緑区若柳1634",
+    "source": "https://rurubu.travel/theme/area/kanto/sagamihara_sagamiko_ebina/",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "スイーツファンタジーパックン金沢文庫": {
+    "address": "神奈川県横浜市金沢区釜利谷東2-1-1 アピタ金沢文庫店",
+    "source": "https://www.mapion.co.jp/phonebook/M02002CL18/",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "タイトーステーション ラ チッタデッラ川崎": {
+    "address": "神奈川県川崎市川崎区小川町4-1 ラ チッタデッラ",
+    "source": "https://www.walkerplus.com/spot/ar0314s03473/map.html",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "横浜みなとみらい 万葉の湯": {
+    "address": "神奈川県横浜市中区新港2-7-1 横浜みなとみらい万葉倶楽部",
+    "source": "https://www.gltjp.com/ja/directory/item/14251/",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "ラウンドワンさいか屋横須賀": {
+    "address": "神奈川県横須賀市大滝町1-13 さいか屋横須賀店",
+    "source": "https://www.kanaloco.jp/news/life/article-1275352.html",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "ベイシア小千谷店あそびのくに": {
+    "address": "新潟県小千谷市三仏生3489-2 ベイシア小千谷店",
+    "source": "https://www.mapion.co.jp/phonebook/M02002CL33/2.html",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "ベイシア新潟豊栄店あそびのくに": {
+    "address": "新潟県新潟市北区かぶとやま2-1-62 ベイシアスーパーセンター新潟豊栄店",
+    "source": "https://www.mapion.co.jp/phonebook/M02002CL33/2.html",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "DeKKY401ファミリーパーク": {
+    "address": "新潟県新潟市中央区上近江4-12-20 DeKKY401",
+    "source": "https://www.pref.niigata.lg.jp/uploaded/attachment/503734.pdf",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "キッズサーカス魚津サンプラザ": {
+    "address": "富山県魚津市駅前新町5-30 魚津ショッピングスクエア サンプラザ",
+    "source": "https://mapfan.com/genres/21/16/204",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "手取フィッシュランドゲームコーナーJOYPARK": {
+    "address": "石川県能美市粟生町ツ58 手取フィッシュランド",
+    "source": "https://www.walkerplus.com/spot/ar0517s14596/data.html",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "フクイレジャーランドワイプラザ": {
+    "address": "福井県福井市新保北1-303 ヤスサキワイプラザB棟2F",
+    "source": "https://gamerch.com/maimai/533404",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "プラファ氷見": {
+    "address": "富山県氷見市加納484 プラファ",
+    "source": "https://mapfan.com/genres/21/16/205",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "ゲオ須坂": {
+    "address": "長野県須坂市墨坂2-6-1",
+    "source": "https://www.navitime.co.jp/category/0110/20/",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "ファンタジープラザ高森": {
+    "address": "長野県下伊那郡高森町山吹4515 MEGAドン・キホーテUNY高森店",
+    "source": "https://ppih.co.jp/news/pdf/news_201111.pdf",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "ASOBLEイオンモール須坂": {
+    "address": "長野県須坂市福島386-1 イオンモール須坂",
+    "source": "https://www.muji.com/jp/ja/shop/detail/046747",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "モーリーファンタジー須坂": {
+    "address": "長野県須坂市福島386-1 イオンモール須坂",
+    "source": "https://www.muji.com/jp/ja/shop/detail/046747",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "(株)清水屋多治見": {
+    "address": "岐阜県多治見市西坂町5-31-1 多治見インターモール1F",
+    "source": "https://jp.indeed.com/l-%e5%a4%9a%e6%b2%bb%e8%a6%8b%e5%b8%82-%e8%99%8e%e6%b8%93%e5%b1%b1%e7%94%ba-%e6%b1%82%e4%ba%ba.html",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "ザ・ビッグ池田": {
+    "address": "岐阜県揖斐郡池田町八幡1972-1 ザ・ビッグエクストラ岐阜池田店",
+    "source": "https://www.re-style.env.go.jp/img/3r-campaign/2020/pdf/big.pdf",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "プラント瑞穂": {
+    "address": "岐阜県瑞穂市犀川5-38 スーパーセンタープラント瑞穂店",
+    "source": "https://www.navitime.co.jp/category/0202001/21216/",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "ルビットランド高山": {
+    "address": "岐阜県高山市岡本町3-18-2 ルビットタウン高山",
+    "source": "https://www.city.takayama.lg.jp/_res/projects/default_project/_page_/001/016/188/6.pdf",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "G-SQUAREMEGAドン・キホーテUNY岐阜": {
+    "address": "岐阜県岐阜市加納神明町6-1 MEGAドン・キホーテUNY岐阜店",
+    "source": "https://hitosara.com/0031236328/map.html",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "MEGAドン・キホーテUNY美濃加茂店マンタ": {
+    "address": "岐阜県美濃加茂市野笹町2-5-65 MEGAドン・キホーテUNY美濃加茂店",
+    "source": "https://r.gnavi.co.jp/f7z3akpm0000/",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "カプコンマークイズ静岡": {
+    "address": "静岡県静岡市葵区柚木1026 MARK IS 静岡",
+    "source": "https://summer.walkerplus.com/odekake/detail/ar0622s46384/data.html",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "キッズバネット静岡": {
+    "address": "静岡県静岡市葵区柚木1026 MARK IS 静岡 3F",
+    "source": "https://www.at-s.com/life/article/ats/1226118.html",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "タイトーステーションウェルディ長泉": {
+    "address": "静岡県駿東郡長泉町下長窪1076-1 ウェルディ長泉",
+    "source": "https://www.navitime.co.jp/category/0503023/22342/",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "アピタ木曽川店ナイル": {
+    "address": "愛知県一宮市木曽川町黒田八ノ通51-4 アピタ木曽川店",
+    "source": "https://www.softbank.jp/shop/search/detail/CA52/",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "アピタ東海荒尾店プラネット": {
+    "address": "愛知県東海市荒尾町山王前60 アピタ東海荒尾店",
+    "source": "https://www.mapion.co.jp/phonebook/M02002CL18/",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "アピタ向山店スタジアム": {
+    "address": "愛知県豊橋市向山町中畑1-1 アピタ向山店",
+    "source": "https://www.mapion.co.jp/phonebook/M02002CL18/",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "カラフルパークイオンタウン有松": {
+    "address": "愛知県名古屋市緑区鳴海町有松裏200 イオンタウン有松",
+    "source": "https://www.aeontown.co.jp/junkai/uploads/pdfs/aeontown/000005/000005/0a511878.pdf",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "ゲームすぽっとアピタ蒲郡": {
+    "address": "愛知県蒲郡市港町17-10 アピタ蒲郡",
+    "source": "https://www.muji.com/jp/ja/shop/045513/articles/info/1550051",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "にこぱウイングタウン": {
+    "address": "愛知県岡崎市羽根町小豆坂3 ウイングタウン岡崎",
+    "source": "https://www.otakaraya.jp/gold/shop/aichi/okazaki_shi/",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "ハローズガーデンワンダーフォレスト江南西": {
+    "address": "愛知県江南市松竹町上野205 VIAMALL",
+    "source": "https://www.navitime.co.jp/category/0105002/23217/",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "バンダイナムコ Cross Store 名古屋": {
+    "address": "愛知県名古屋市西区二方町40 mozo ワンダーシティ4F",
+    "source": "https://gamebiz.jp/news/404642",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "ラクスパガーデン名古屋": {
+    "address": "愛知県名古屋市名東区平和が丘1-65-2 RAKU SPA GARDEN 名古屋",
+    "source": "https://www.mapple.net/original/402852/",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "namcoヨシヅヤ清州": {
+    "address": "愛知県清須市西市場5-5-3 ヨシヅヤ清洲店",
+    "source": "https://www.navitime.co.jp/category/0810001/23233/",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "ラスパ太田川店アミューズメントパーク": {
+    "address": "愛知県東海市大田町下浜田102-1 ラスパ太田川",
+    "source": "https://www.navitime.co.jp/category/0701002001/23222/",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "カラフルパークNICOPA千種 (NICOPA & nico ground 千種)": {
+    "address": "愛知県名古屋市千種区千種2-16-13 イオンタウン千種2F",
+    "source": "https://www.aeontown.co.jp/chuzai/uploads/pdfs/aeontown/000096/000096/587b70e7.pdf",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "カヨーゲームランド": {
+    "address": "三重県四日市市日永4-2-41 日永カヨー 2F",
+    "source": "https://map.yahoo.co.jp/v3/place/92e8O4WLf1s",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "NICOPAイオン伊勢": {
+    "address": "三重県伊勢市楠部町乙160-2 イオン伊勢店 2F",
+    "source": "https://www.aeon.com/store/%E3%82%A4%E3%82%AA%E3%83%B3/%E3%82%A4%E3%82%AA%E3%83%B3%E4%BC%8A%E5%8B%A2%E5%BA%97/shop_info/service",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "NICOPA桑名": {
+    "address": "三重県桑名市中央町3-21 アピタ桑名店",
+    "source": "https://www.pref.mie.lg.jp/KIGYORI/HP/daiten/59934020689.htm",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "NICOPAそよら津桜橋": {
+    "address": "三重県津市桜橋3-446 そよら津桜橋",
+    "source": "https://www.ryutsuu.biz/store/s081444.html",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "あそVIVAゲームセンター": {
+    "address": "京都府福知山市堀上高田2146-1",
+    "source": "https://page.line.me/208zyrpm",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "カプコミクスあべのHOOP": {
+    "address": "大阪府大阪市阿倍野区阿倍野筋1-2-30 Hoop 3F",
+    "source": "https://iko-yo.net/facilities/186898",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "ラウンドワンスタジアム堺中央環状": {
+    "address": "大阪府堺市東区石原町2-241",
+    "source": "https://www.walkerplus.com/spot/ar0727s75931/data.html",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "モーリーファンタジー四条畷": {
+    "address": "大阪府四條畷市砂4-3-2 イオンモール四條畷",
+    "source": "https://www.walkerplus.com/article/90189/",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "楽市楽座イオンモール四条畷": {
+    "address": "大阪府四條畷市砂4-3-2 イオンモール四條畷",
+    "source": "https://www.walkerplus.com/article/90189/",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "ネスタリゾート神戸": {
+    "address": "兵庫県三木市細川町垂穂894-60",
+    "source": "https://iko-yo.net/facilities/67214",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "GiGO クレーンゲームオアシスニッケパークタウン": {
+    "address": "兵庫県加古川市加古川町寺家町173-1 ニッケパークタウン",
+    "source": "https://www.navitime.co.jp/category/0101009/28210/",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "アミューズメントパークイオン奈良登美ヶ丘": {
+    "address": "奈良県生駒市鹿畑町3027 イオンモール奈良登美ヶ丘",
+    "source": "https://www.aeon.com/store/%E3%82%A4%E3%82%AA%E3%83%B3/%E3%82%A4%E3%82%AA%E3%83%B3%E7%99%BB%E7%BE%8E%E3%83%B6%E4%B8%98%E5%BA%97/shop_info/service",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "にこぱガーデンパーク和歌山": {
+    "address": "和歌山県和歌山市松江向鵜ノ島1469-1 ガーデンパーク和歌山 2F",
+    "source": "https://iko-yo.net/facilities/24073/tickets",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "ピノッキースパティオ浜田": {
+    "address": "島根県浜田市港町227-1 ゆめタウン浜田",
+    "source": "https://www.pref.shimane.lg.jp/industry/syoko/sangyo/kouri_tenpo/todokede/h27/yumetaun_hamada-61.html",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "ピノッキースパティオ益田": {
+    "address": "島根県益田市高津7-21-12 ゆめタウン益田",
+    "source": "https://www.mapion.co.jp/phonebook/M02002CL38/",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "アミューズメントパークMG リブ総社": {
+    "address": "岡山県総社市門田187 天満屋ハピータウン リブ総社店",
+    "source": "https://page.line.me/183dnugp",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "キッズスマイルエブリイOkanaka津高 (GiGO エブリイOkanaka津高)": {
+    "address": "岡山県岡山市北区横井上83-3 エブリイOkanaka津高",
+    "source": "https://www.muji.com/jp/ja/shop/detail/046301",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "お宝買取団東広島": {
+    "address": "広島県東広島市西条御条町6-20",
+    "source": "https://home.hiroshima-u.ac.jp/~ntsunema/assets/pdf/society/second_hand_shops_chinese.pdf",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "ハッピーランドさんすて福山": {
+    "address": "広島県福山市三之丸町30-1 さんすて福山",
+    "source": "https://ekitan.com/media/epi/tbc/tbc-shop043/",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "コジマ×ビッグカメラ宇部空港": {
+    "address": "山口県宇部市東見初町1-76",
+    "source": "https://mapfan.com/genres/20/35/202",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "ピノッキースパティオ宇部": {
+    "address": "山口県宇部市黒石北3-4-1 ゆめタウン宇部",
+    "source": "https://www.softbank.jp/shop/search/detail/N323/",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "ピノッキースパティオ南岩国": {
+    "address": "山口県岩国市南岩国町1-20-30 ゆめタウン南岩国",
+    "source": "https://jp.indeed.com/q-%e3%81%9f%e3%81%93%e4%b8%80%e7%95%aa%e3%80%80%e3%82%86%e3%82%81%e3%82%bf%e3%82%a6%e3%83%b3%e5%8d%97%e5%b2%a9%e5%9b%bd%e5%ba%97-%e6%b1%82%e4%ba%ba.html",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "ピノッキースパティオ防府": {
+    "address": "山口県防府市八王子2-8-8 ゆめタウン防府",
+    "source": "https://www.re-style.env.go.jp/img/3r-campaign/2024/pdf/izumi.pdf",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "ピノッキースパティオ山口": {
+    "address": "山口県山口市大内千坊6-9-1 ゆめタウン山口",
+    "source": "https://www.pref.yamaguchi.lg.jp/uploaded/attachment/56898.pdf",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "フラーボスパティオ": {
+    "address": "山口県柳井市南町4-5-3 ゆめタウン柳井",
+    "source": "https://www.re-style.env.go.jp/img/3r-campaign/2024/pdf/izumi.pdf",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "チッキッズ瓦町FLAG": {
+    "address": "香川県高松市常磐町1-3-1 瓦町FLAG",
+    "source": "https://www.mapple.net/station/289576/spot/",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "まるゲ": {
+    "address": "香川県高松市南新町8-12",
+    "source": "https://jp.indeed.com/q-%e5%ba%97%e8%88%97%e3%82%b9%e3%82%bf%e3%83%83%e3%83%95-l-%e9%ab%98%e6%9d%be%e5%b8%82-%e5%8d%97%e6%96%b0%e7%94%ba-%e6%b1%82%e4%ba%ba.html",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "サープラ新宮あそびタウン": {
+    "address": "福岡県糟屋郡新宮町美咲3-1 新宮ドーム",
+    "source": "https://page.line.me/316aqepv",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "スペースタイム25イオン甘木": {
+    "address": "福岡県朝倉市甘木380 イオン甘木店",
+    "source": "https://www.ekiten.jp/g0304/a40228/?f%5B%5D=13",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "スペースタイム25サンリブくりいえいと宗像": {
+    "address": "福岡県宗像市くりえいと1-5-1 サンリブくりえいと宗像",
+    "source": "https://www.navitime.co.jp/category/0404002/40220/",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "Feedy Dinner＆Arcade 綾川": {
+    "address": "香川県綾歌郡綾川町萱原822-1 イオンモール綾川",
+    "source": "https://www.walkerplus.com/spot/ar0937s23106/map.html",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "ゆめタウン武雄店ゆめキッズ": {
+    "address": "佐賀県武雄市武雄町武雄4992 ゆめタウン武雄",
+    "source": "https://www.navitime.co.jp/category/02/41206/",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "G-stage浜の町": {
+    "address": "長崎県長崎市浜町2-26",
+    "source": "https://gamerch.com/maimai/534218",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "ピノキオランドあらおシティモール (パスカランドあらおシティモール)": {
+    "address": "熊本県荒尾市緑ヶ丘1-1-1 あらおシティモール",
+    "source": "https://www.pref.kumamoto.jp/uploaded/attachment/46597.pdf",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "マンガ倉庫住吉": {
+    "address": "宮崎県宮崎市島之内7315-4",
+    "source": "https://map.yahoo.co.jp/v3/place/lQjeegDzlbU",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "ラウンドワンスタジアム宮崎": {
+    "address": "宮崎県宮崎市中村東3-4-60",
+    "source": "https://www.walkerplus.com/spot/ar1045s76867/map.html",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "マンガ倉庫鹿児島": {
+    "address": "鹿児島県鹿児島市小松原1-6-7",
+    "source": "https://torecamap.co.jp/shops/kagoshima/r46001/s46001043/2086",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "パレット串木野": {
+    "address": "鹿児島県いちき串木野市東塩田町1",
+    "source": "https://www.navitime.co.jp/category/0105/46219/",
+    "memo": "Web検索で調査（2026-10-10）"
+  },
+  "ディサービスセンター元気の里": {
+    "address": "宮崎県都城市上川東2-4-13",
+    "source": "https://kaigo.homes.co.jp/scare/ob_4570202061/",
+    "memo": "Web検索で調査（2026-10-10）"
   }
 }

@@ -2,7 +2,7 @@
 // 画面のファイル（HTML・CSS・JavaScript）と店舗データはネットワークを優先し、つながらないときだけキャッシュを使う
 // （キャッシュ優先だと、サイトを更新したあと新しい HTML と古い JavaScript が混ざって動かなくなることがあるため）。
 // アイコン・地図ライブラリ・駅データはキャッシュを優先し、裏で新しいものに更新する。
-const VERSION = "v17";
+const VERSION = "v18";
 const APP_CACHE = `app-${VERSION}`;
 const TILE_CACHE = "tiles";
 const TILE_LIMIT = 800;  // 地図画像は見た範囲を最大この枚数まで保存

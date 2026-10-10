@@ -399,11 +399,16 @@
   function nearbySearch() {
     if (!nativeGeo && !navigator.geolocation) return alert("このブラウザは現在地取得に対応していません");
     const btn = $("nearby");
+    const done = () => { btn.classList.remove("busy"); btn.disabled = false; btn.textContent = "周辺検索"; };
     btn.classList.add("busy");
     btn.disabled = true;
+    btn.textContent = "取得中…";
+    // PC のブラウザでは位置情報の許可を求める表示がアドレスバー付近に小さく出るため、案内を出しておく
+    clearPlace();
+    setNote("現在地を取得しています…<br>位置情報の許可を求められたら「許可」を選んでください。");
+    if (isMobile()) $("side").classList.add("open");
     getPosition(p => {
-      btn.classList.remove("busy");
-      btn.disabled = false;
+      done();
       const ll = showMe(p);
       // 検索語は消して、絞り込み条件（地方・台数など）だけを適用
       clearTimeout(t);
@@ -417,10 +422,12 @@
       $("list").scrollTop = 0;
       if (isMobile()) $("side").classList.add("open");
       flyToNearby(ll, near);
-    }, () => {
-      btn.classList.remove("busy");
-      btn.disabled = false;
-      alert("現在地を取得できませんでした。位置情報の許可と、端末の位置情報がオンになっているかを確認してください。");
+    }, err => {
+      done();
+      const denied = err && err.code === 1;
+      setNote(denied
+        ? "現在地を取得できませんでした。<br>ブラウザ（アドレスバーの左側の設定）で、このサイトの位置情報を「許可」にしてください。"
+        : "現在地を取得できませんでした。<br>端末の位置情報がオンになっているか確認してください（Mac では「システム設定 → プライバシーとセキュリティ → 位置情報サービス」でブラウザを許可）。");
     });
   }
   $("nearby").addEventListener("click", nearbySearch);
@@ -455,6 +462,12 @@
 
   // ホーム画面に追加したときのオフライン対応（Android アプリ内では不要）
   if ("serviceWorker" in navigator && window.isSecureContext && !window.Capacitor?.isNativePlatform?.()) {
+    // サイトが更新されて新しいサービスワーカーに切り替わったら、新しいファイルで開き直す（初回の登録時は除く）
+    const hadController = !!navigator.serviceWorker.controller;
+    let reloading = false;
+    navigator.serviceWorker.addEventListener("controllerchange", () => {
+      if (hadController && !reloading) { reloading = true; location.reload(); }
+    });
     navigator.serviceWorker.register("sw.js").catch(() => {});
   }
 })();

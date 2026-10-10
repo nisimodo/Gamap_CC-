@@ -1,7 +1,8 @@
 // オフラインでも前回のデータで開けるようにするサービスワーカー
-// 画面のファイル・ライブラリはキャッシュを優先し、裏で新しいものに更新する。
-// 店舗データ (data/stores.js) はネットワークを優先し、つながらないときだけキャッシュを使う。
-const VERSION = "v11";
+// 画面のファイル（HTML・CSS・JavaScript）と店舗データはネットワークを優先し、つながらないときだけキャッシュを使う
+// （キャッシュ優先だと、サイトを更新したあと新しい HTML と古い JavaScript が混ざって動かなくなることがあるため）。
+// アイコン・地図ライブラリ・駅データはキャッシュを優先し、裏で新しいものに更新する。
+const VERSION = "v12";
 const APP_CACHE = `app-${VERSION}`;
 const TILE_CACHE = "tiles";
 const TILE_LIMIT = 800;  // 地図画像は見た範囲を最大この枚数まで保存
@@ -17,7 +18,10 @@ const APP_SHELL = [
 ];
 
 self.addEventListener("install", e => {
-  e.waitUntil(caches.open(APP_CACHE).then(c => c.addAll(APP_SHELL)).then(() => self.skipWaiting()));
+  // ブラウザの HTTP キャッシュにある古いファイルを使わないよう、取り直して保存する
+  e.waitUntil(caches.open(APP_CACHE)
+    .then(c => c.addAll(APP_SHELL.map(u => new Request(u, { cache: "reload" }))))
+    .then(() => self.skipWaiting()));
 });
 
 self.addEventListener("activate", e => {
@@ -26,14 +30,20 @@ self.addEventListener("activate", e => {
     .then(() => self.clients.claim()));
 });
 
+const NETWORK_TIMEOUT_MS = 4000;  // 通信が遅いとき、キャッシュがあればこの時間でキャッシュに切り替える
+
 async function networkFirst(req) {
   const cache = await caches.open(APP_CACHE);
-  try {
-    const res = await fetch(req, { cache: "no-cache" });
+  const cached = await cache.match(req, { ignoreSearch: true });
+  const network = fetch(req, { cache: "no-cache" }).then(res => {
     if (res.ok) cache.put(req, res.clone());
     return res;
+  });
+  try {
+    if (!cached) return await network;
+    return await Promise.race([network, new Promise((_, reject) => setTimeout(() => reject(new Error("timeout")), NETWORK_TIMEOUT_MS))]);
   } catch {
-    return (await cache.match(req, { ignoreSearch: true })) || Response.error();
+    return cached || Response.error();
   }
 }
 
@@ -66,7 +76,8 @@ self.addEventListener("fetch", e => {
   const url = new URL(req.url);
   if (url.origin === location.origin && url.pathname.includes("/apk/")) return;  // APK 配布は常にネットワークから
   if (url.origin === location.origin) {
-    if (url.pathname.endsWith("/data/stores.js") || req.mode === "navigate") e.respondWith(networkFirst(req));
+    const code = req.mode === "navigate" || /\.(html|css|js|webmanifest)$/.test(url.pathname) || url.pathname.endsWith("/");
+    if (code && !url.pathname.endsWith("/data/stations.js")) e.respondWith(networkFirst(req));
     else e.respondWith(staleWhileRevalidate(req));
   } else if (url.hostname === "cdnjs.cloudflare.com") {
     e.respondWith(staleWhileRevalidate(req));

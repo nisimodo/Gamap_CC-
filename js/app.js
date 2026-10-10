@@ -49,7 +49,8 @@
       ${notes.length ? `<div class="notes">${notes.join("")}</div>` : ""}
       ${s.precision === "city" ? '<div class="approx-msg">※ 店舗の正確な位置が取得できなかったため、市区町村付近に表示しています</div>' : ""}
       ${s.precision === "area" ? `<div class="approx-msg">※ 店舗名の地名から、${esc(s.locNote)}に表示しています（正確な位置ではありません）</div>` : ""}
-      ${s.precision === "station" ? `<div class="osm-msg">地図上の位置: ${esc(s.locNote)}（店舗名から推定）</div>` : ""}
+      ${s.manual ? `<div class="osm-msg">地図上の位置: ${esc(s.locNote)}（手動で修正）</div>`
+        : s.precision === "station" ? `<div class="osm-msg">地図上の位置: ${esc(s.locNote)}（店舗名から推定）</div>` : ""}
       ${s.farFromCity && !s.fixedCity ? `<div class="approx-msg">※ 元データの市区町村（${esc(s.city + s.town)}）から離れた場所です。店舗名の地名をもとに表示しています</div>` : ""}
       ${s.osmName ? `<div class="osm-msg">地図上の位置: OpenStreetMap「${esc(s.osmName)}」</div>` : ""}
       <div class="links">

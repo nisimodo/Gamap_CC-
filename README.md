@@ -75,6 +75,7 @@ data/stations.js                全国の駅（地名検索用・自動生成）
 tools/build_data.py             Excel → stores.js の変換と位置の推定（Python 標準ライブラリのみ）
 tools/update.py                 OneDrive から Excel を取得し、更新があれば build_data.py を実行
 tools/config.json               取得元の共有リンク
+tools/corrections.json          店舗の位置の手動修正
 tools/geocode_cache.json, osm_poi.json, osm_stations.json  位置情報のキャッシュ
 .github/workflows/update.yml    3 時間ごとに update.py を実行してデータをコミット
 app/                            Android アプリ（Capacitor）
@@ -98,6 +99,7 @@ python3 tools/build_data.py 太鼓の達人.xlsx   # 手元の Excel から作�
 
 - `build_data.py` のオプション: `--refresh-osm`（OpenStreetMap の施設・駅データを取り直す。十数分かかる）、`--nominatim`（見つからない店舗を Nominatim でも検索。1 秒 1 件なので時間がかかる）
 - `update.py` は OneDrive の共有ファイルをログインなしで取得しています（OneDrive Web と同じ仕組みで、非公式な方法です）。Microsoft 側の仕様変更で使えなくなった場合は、手動でダウンロードして `build_data.py` を実行してください。
+- 店舗の位置を手動で直すときは `tools/corrections.json` に追記します（例: `"店舗名": {"station": "恵比寿"}` でその駅付近、`{"lat": 35.6, "lng": 139.7}` でその地点）。次の更新から反映され、ポップアップに「手動で修正」と表示されます。
 - 自動更新を自分のリポジトリで動かすには、Settings → Actions → General → Workflow permissions を「Read and write permissions」にします。
 
 ### Android アプリ（APK）を作る

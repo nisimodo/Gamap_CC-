@@ -396,6 +396,21 @@ def names_other_city(core, s, cache):
 
 
 MUNI_PATH = ROOT / "tools" / "gsi_muni.json"
+CORRECTIONS_PATH = ROOT / "tools" / "corrections.json"
+
+
+def apply_correction(s, corr, center, station_index):
+    """tools/corrections.json の手動修正。(位置, 精度, 説明) を返す。該当しなければ None"""
+    if "lat" in corr and "lng" in corr:
+        return [corr["lat"], corr["lng"]], "store", corr.get("note", "")
+    if "station" in corr:
+        cands = station_index.get(norm(corr["station"]), [])
+        if center:
+            cands = sorted(cands, key=lambda st: haversine(center, (st[1], st[2])))
+        if cands:
+            return [cands[0][1], cands[0][2]], "station", corr.get("note") or f"{cands[0][0]}駅付近"
+        print(f"  手動修正の駅が見つかりません: {s['name']} → {corr['station']}")
+    return None
 
 
 def load_muni():
@@ -546,6 +561,11 @@ def main():
     index = PoiIndex(load_osm("--refresh-osm" in sys.argv))
     stations = load_stations("--refresh-osm" in sys.argv)
     muni = load_muni()
+    corrections = {k: v for k, v in json.loads(CORRECTIONS_PATH.read_text("utf-8")).items() if not k.startswith("_")} \
+        if CORRECTIONS_PATH.exists() else {}
+    unknown = [k for k in corrections if k not in {x["name"] for x in stores}]
+    if unknown:
+        print("手動修正に Excel に無い店舗名があります:", "、".join(unknown))
     station_index = {}
     for st in stations:
         station_index.setdefault(norm(st[0]), []).append(st)
@@ -578,6 +598,14 @@ def main():
                     s["locNote"] = f"{town[0].removeprefix(s['pref'])}付近"
             if i % 50 == 0:
                 save_cache()
+        corr = corrections.get(s["name"])
+        if corr:
+            fixed = apply_correction(s, corr, center, station_index)
+            if fixed:
+                pos, prec, s["locNote"] = fixed
+                s["manual"] = True
+                s.pop("osmName", None)
+                matched = None
         s["lat"], s["lng"] = (round(pos[0], 6), round(pos[1], 6)) if pos else (None, None)
         s["precision"] = prec
         if matched and matched != s["name"]:

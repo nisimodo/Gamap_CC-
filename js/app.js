@@ -7,7 +7,9 @@
   const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const unitsOf = s => parseInt(String(s.units).replace(/[^0-9]/g, ""), 10) || 0;
   const isUnknown = s => s.status === "情報募集中" || s.serials.includes("不明");
-  const addr = s => [s.pref, s.city, s.town].filter(Boolean).join(" ");
+  // 元データの区が店舗名と食い違う店舗は、店舗名の地名から求めた区を表示する（fixedCity）
+  const addr = s => s.fixedCity ? `${s.fixedPref} ${s.fixedCity}` : [s.pref, s.city, s.town].filter(Boolean).join(" ");
+  const excelAddr = s => [s.city, s.town].filter(Boolean).join(" ");
 
   // ---------- 地図（国土地理院タイル / OpenStreetMap：どちらも無料・キー不要） ----------
   const gsiPale = L.tileLayer("https://cyberjapandata.gsi.go.jp/xyz/pale/{z}/{x}/{y}.png", {
@@ -33,10 +35,10 @@
     if (s.status) notes.push(`<span class="note">${esc(s.status)}</span>`);
     if (s.change) notes.push(`<span class="note info">${esc(s.change)}</span>`);
     if (s.note) notes.push(`<span class="note info">${esc(s.note)}</span>`);
-    const q = encodeURIComponent(`${s.name} ${s.pref}${s.city}${s.town}`);
+    const q = encodeURIComponent(`${s.name} ${addr(s).replace(/ /g, "")}`);
     return `<div class="pop">
       <h3>${esc(s.name)}</h3>
-      <div class="addr">${esc(addr(s))}</div>
+      <div class="addr">${esc(addr(s))}${s.fixedCity ? `<span class="orig">（元データでは${esc(excelAddr(s))}）</span>` : ""}</div>
       <div class="stats">
         <div class="stat"><b>${esc(s.price || "?")}</b><small>料金</small></div>
         <div class="stat"><b>${esc(s.songs || "?")}</b><small>曲数</small></div>
@@ -48,7 +50,7 @@
       ${s.precision === "city" ? '<div class="approx-msg">※ 店舗の正確な位置が取得できなかったため、市区町村付近に表示しています</div>' : ""}
       ${s.precision === "area" ? `<div class="approx-msg">※ 店舗名の地名から、${esc(s.locNote)}に表示しています（正確な位置ではありません）</div>` : ""}
       ${s.precision === "station" ? `<div class="osm-msg">地図上の位置: ${esc(s.locNote)}（店舗名から推定）</div>` : ""}
-      ${s.farFromCity ? `<div class="approx-msg">※ 元データの市区町村（${esc(s.city + s.town)}）から離れた場所です。店舗名の地名をもとに表示しています</div>` : ""}
+      ${s.farFromCity && !s.fixedCity ? `<div class="approx-msg">※ 元データの市区町村（${esc(s.city + s.town)}）から離れた場所です。店舗名の地名をもとに表示しています</div>` : ""}
       ${s.osmName ? `<div class="osm-msg">地図上の位置: OpenStreetMap「${esc(s.osmName)}」</div>` : ""}
       <div class="links">
         <a href="https://www.google.com/maps/search/?api=1&query=${q}" target="_blank" rel="noopener">Googleマップで探す</a>
@@ -88,7 +90,7 @@
   fillPrefs();
 
   const norm = s => s.normalize("NFKC").toLowerCase().replace(/\s+/g, "");
-  for (const s of stores) s._key = norm([s.name, s.pref, s.city, s.town, ...s.serials].join(" "));
+  for (const s of stores) s._key = norm([s.name, addr(s), ...s.serials].join(" "));
 
   let current = [];
   let distances = null;  // 店舗 id → 距離 (km)。地名検索では地点から、ヒットが少ないときはヒットした店舗からの距離

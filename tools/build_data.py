@@ -395,6 +395,47 @@ def names_other_city(core, s, cache):
     return False
 
 
+MUNI_PATH = ROOT / "tools" / "gsi_muni.json"
+
+
+def load_muni():
+    """国土地理院の市区町村コード表 {コード: [都道府県, 市区町村名]}（tools/gsi_muni.json にキャッシュ）"""
+    if MUNI_PATH.exists():
+        return json.loads(MUNI_PATH.read_text("utf-8"))
+    req = urllib.request.Request("https://maps.gsi.go.jp/js/muni.js", headers={"User-Agent": UA})
+    with urllib.request.urlopen(req, timeout=60) as r:
+        text = r.read().decode("utf-8")
+    muni = {str(int(code)): [pref, name.replace("　", "")]
+            for code, pref, name in re.findall(r"\[\"(\d+)\"\] = '\d+,([^,]+),\d+,([^']+)'", text)}
+    MUNI_PATH.write_text(json.dumps(muni, ensure_ascii=False, separators=(",", ":")), "utf-8")
+    return muni
+
+
+def municipality_at(pos, muni, cache):
+    """その地点の [都道府県, 市区町村名]（国土地理院 逆ジオコーダー）"""
+    key = f"rev:{pos[0]:.5f},{pos[1]:.5f}"
+    if key not in cache:
+        try:
+            d = fetch_json("https://mreversegeocoder.gsi.go.jp/reverse-geocoder/LonLatToAddress"
+                           f"?lat={pos[0]}&lon={pos[1]}")
+            time.sleep(0.2)
+            cache[key] = (d.get("results") or {}).get("muniCd")
+        except Exception as e:
+            print("  逆ジオコーダー error", pos, e)
+            return None
+    code = cache[key]
+    return muni.get(str(int(code))) if code else None
+
+
+def same_municipality(found, s):
+    """地点の市区町村が Excel の市区町村と同じか（「札幌市清田区」と Excel の「札幌市」、「塩竈市」と「塩竃市」は同じとみなす）"""
+    variants = str.maketrans({"竃": "竈", "ヶ": "ケ", "ケ": "ケ", "檜": "桧", "﨑": "崎", "邊": "辺", "邉": "辺"})
+    pref, name = found[0], found[1].translate(variants)
+    excel = (s["city"] + s["town"]).translate(variants)
+    city = re.match(r".+?市(?=.+区$)", name)  # 政令指定都市の「〇〇市」部分
+    return pref == s["pref"] and (name in excel or (city and city.group(0) in excel) or excel in name)
+
+
 def names_own_city(core, s):
     """店舗名の地名が、その店舗の市区町村名そのものか（「ラウンドワン浜松」が浜松市にある場合など）。
     市の名前を付けただけで駅前とは限らないので、駅・町名からの推定に使わない"""
@@ -504,6 +545,7 @@ def main():
     print("店舗の位置を照合中（OpenStreetMap）…")
     index = PoiIndex(load_osm("--refresh-osm" in sys.argv))
     stations = load_stations("--refresh-osm" in sys.argv)
+    muni = load_muni()
     station_index = {}
     for st in stations:
         station_index.setdefault(norm(st[0]), []).append(st)
@@ -540,6 +582,13 @@ def main():
         s["precision"] = prec
         if matched and matched != s["name"]:
             s["osmName"] = matched
+        # 店舗名から推定した位置が Excel と別の区なら、表示する区を直す（Excel の値は元データとして残す）。
+        # Excel の東京23区の表は区の欄に明らかな誤りが多いため、この表だけを対象にする。
+        # ほかの地域で食い違うのは、市境の近くで隣の市の駅名を付けた店舗（アピナ津田沼が船橋市など）が多く、Excel の方が正しい
+        if prec in ("station", "area") and "２３区" in s["area"] and "外" not in s["area"]:
+            found = municipality_at(pos, muni, cache)
+            if found and not same_municipality(found, s):
+                s["fixedPref"], s["fixedCity"] = found
         # Excel の市区町村から大きく離れた位置になった店舗（市区町村欄の誤りの可能性）
         if prec in ("station", "area") and center and haversine(center, pos) > 8:
             s["farFromCity"] = True
@@ -550,6 +599,10 @@ def main():
         [[n, la, lo, "・".join(ops[:2])] for n, la, lo, ops in stations], ensure_ascii=False, separators=(",", ":")) + ";\n", "utf-8")
     counts = {p: sum(1 for x in stores if x["precision"] == p) for p in ("store", "station", "area", "city")}
     print(f"位置: 施設 {counts['store']} / 駅 {counts['station']} / 町名 {counts['area']} / 市区町村 {counts['city']}")
+    fixed = [x for x in stores if x.get("fixedCity")]
+    print(f"市区町村の表示を直した店舗 ({len(fixed)}):")
+    for x in fixed:
+        print(f"  {x['name']}: {x['pref']}{x['city']}{x['town']} → {x['fixedPref']}{x['fixedCity']}")
     if suspicious:
         print(f"Excel の市区町村と店舗名の地名が離れている店舗 ({len(suspicious)}):")
         for x in suspicious:

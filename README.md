@@ -38,7 +38,7 @@ https://nisimodo.github.io/Gamap_CC-/
 
 **Android** … Chrome で [Gamap](https://nisimodo.github.io/Gamap_CC-/) を開き、右上の「︙」→「アプリをインストール」（または「ホーム画面に追加」）
 
-**Android アプリ（APK）** … [ダウンロードページ](https://nisimodo.github.io/Gamap_CC-/apk/) からインストールできます。アプリは開くたびに最新の店舗データを読み込み、新しいバージョンがあれば更新を案内します。
+**Android アプリ（APK）** … [ダウンロードページ](https://nisimodo.github.io/Gamap_CC-/apk/) からインストールできます。アプリは開くたびに最新の画面と店舗データを読み込み、APK の更新が必要なときは案内します。
 
 ## データについて
 
@@ -109,7 +109,9 @@ npm install
 npm run build:apk    # app/taiko-map.apk ができる
 ```
 
-- アプリは起動時に公開サイトから最新の店舗データを読み込みます（`js/app-loader.js`）。通信できないときは、前回読み込んだデータか、ビルド時に同梱したデータを使います。
+- アプリは起動時に公開サイトから最新の画面（`index.html`・`css/style.css`・`js/app.js`）と店舗データを読み込みます（`js/app-loader.js`）。サイトを更新すれば、APK を作り直さなくてもアプリに反映されます。
+  - 4 ファイルがそろって取得できたときだけ切り替え、オフライン用に保存します。通信できないときは保存済みの版か、APK に同梱した版を使います。公開サイト版でエラーが出たときは同梱の版に戻ります。
+  - 地図ライブラリ（Leaflet）・Capacitor のプラグイン・アイコン画像などはアプリ同梱のものを使います。これらを変えたときや、`index.html` で `id="map"` などの要素の構成を大きく変えたときは、APK を更新してください。
 - 新しい版を配布するときは、`android/app/build.gradle` の `versionCode`（整数）と `versionName` を上げてから `npm run release -- "変更点"` を実行し、commit・push します。`apk/gamap.apk` と `apk/version.json` が公開され、インストール済みのアプリは起動時に更新を案内します。
 - アイコンは `app/resources/icon.png`。差し替えたら `npm run icons` を実行します。
 - 現在の APK はデバッグ署名です。Google Play で配布する場合はリリース用の署名が必要です。

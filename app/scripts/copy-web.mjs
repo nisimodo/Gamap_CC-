@@ -37,8 +37,11 @@ for (const p of VENDOR) {
 
 const html = readFileSync(join(SITE, "index.html"), "utf8").replaceAll(CDN, "vendor/")
   // アプリでは起動時に公開サイトから最新の店舗データを読み込む（js/app-loader.js が data/stores.js と js/app.js を読む）
-  .replace(/<script src="data\/stores\.js"><\/script>\s*<script src="js\/app\.js"><\/script>/, '<script src="js/app-loader.js"></script>');
+  .replace(/<script src="data\/stores\.js"><\/script>\s*<script src="js\/app\.js"><\/script>/,
+    '<script src="js/build-info.js"></script>\n  <script src="js/app-loader.js"></script>');
 if (!html.includes("app-loader.js")) throw new Error("index.html の読み込み部分を置き換えられませんでした");
 if (html.includes("cdnjs.cloudflare.com")) throw new Error("index.html に置き換えられなかった CDN の参照があります");
 writeFileSync(join(WWW, "index.html"), html);
+// アプリに同梱した画面・データの作成日時（js/app-loader.js が、保存済みの公開サイト版と比べるのに使う）
+writeFileSync(join(WWW, "js", "build-info.js"), `window.GAMAP_BUILD = ${JSON.stringify(new Date().toISOString())};\n`);
 console.log("www を作成しました");

@@ -399,8 +399,23 @@ MUNI_PATH = ROOT / "tools" / "gsi_muni.json"
 CORRECTIONS_PATH = ROOT / "tools" / "corrections.json"
 
 
-def apply_correction(s, corr, center, station_index):
+def geocode_address(address, pref, cache):
+    """住所（「東京都練馬区東大泉2-10-11 LIVINオズ大泉5F」など）の位置（国土地理院 住所検索）"""
+    m = re.match(r".*?\d+(?:[-－‐ー]\d+)*", unicodedata.normalize("NFKC", address))  # 建物名より後ろは外す
+    query = m.group(0) if m else address
+    for title, lat, lon in gsi_places(query, cache):
+        if title.startswith(pref):
+            return [lat, lon]
+    return None
+
+
+def apply_correction(s, corr, center, station_index, cache):
     """tools/corrections.json の手動修正。(位置, 精度, 説明) を返す。該当しなければ None"""
+    if "address" in corr:
+        pos = geocode_address(corr["address"], s["pref"], cache)
+        if pos:
+            return pos, "store", corr.get("note") or corr["address"]
+        print(f"  手動修正の住所が見つかりません: {s['name']} → {corr['address']}")
     if "lat" in corr and "lng" in corr:
         return [corr["lat"], corr["lng"]], "store", corr.get("note", "")
     if "station" in corr:
@@ -600,10 +615,12 @@ def main():
                 save_cache()
         corr = corrections.get(s["name"])
         if corr:
-            fixed = apply_correction(s, corr, center, station_index)
+            fixed = apply_correction(s, corr, center, station_index, cache)
             if fixed:
                 pos, prec, s["locNote"] = fixed
                 s["manual"] = True
+                if corr.get("address"):
+                    s["address"] = corr["address"]
                 s.pop("osmName", None)
                 matched = None
         s["lat"], s["lng"] = (round(pos[0], 6), round(pos[1], 6)) if pos else (None, None)

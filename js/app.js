@@ -35,10 +35,10 @@
     if (s.status) notes.push(`<span class="note">${esc(s.status)}</span>`);
     if (s.change) notes.push(`<span class="note info">${esc(s.change)}</span>`);
     if (s.note) notes.push(`<span class="note info">${esc(s.note)}</span>`);
-    const q = encodeURIComponent(`${s.name} ${addr(s).replace(/ /g, "")}`);
+    const q = encodeURIComponent(`${s.name} ${(s.address || addr(s)).replace(/ /g, "")}`);
     return `<div class="pop">
       <h3>${esc(s.name)}</h3>
-      <div class="addr">${esc(addr(s))}${s.fixedCity ? `<span class="orig">（元データでは${esc(excelAddr(s))}）</span>` : ""}</div>
+      <div class="addr">${esc(s.address || addr(s))}${s.fixedCity ? `<span class="orig">（元データでは${esc(excelAddr(s))}）</span>` : ""}</div>
       <div class="stats">
         <div class="stat"><b>${esc(s.price || "?")}</b><small>料金</small></div>
         <div class="stat"><b>${esc(s.songs || "?")}</b><small>曲数</small></div>
@@ -49,7 +49,7 @@
       ${notes.length ? `<div class="notes">${notes.join("")}</div>` : ""}
       ${s.precision === "city" ? '<div class="approx-msg">※ 店舗の正確な位置が取得できなかったため、市区町村付近に表示しています</div>' : ""}
       ${s.precision === "area" ? `<div class="approx-msg">※ 店舗名の地名から、${esc(s.locNote)}に表示しています（正確な位置ではありません）</div>` : ""}
-      ${s.manual ? `<div class="osm-msg">地図上の位置: ${esc(s.locNote)}（手動で修正）</div>`
+      ${s.manual ? `<div class="osm-msg">地図上の位置: ${s.address ? "住所" : esc(s.locNote)}（手動で修正）</div>`
         : s.precision === "station" ? `<div class="osm-msg">地図上の位置: ${esc(s.locNote)}（店舗名から推定）</div>` : ""}
       ${s.farFromCity && !s.fixedCity ? `<div class="approx-msg">※ 元データの市区町村（${esc(s.city + s.town)}）から離れた場所です。店舗名の地名をもとに表示しています</div>` : ""}
       ${s.osmName ? `<div class="osm-msg">地図上の位置: OpenStreetMap「${esc(s.osmName)}」</div>` : ""}
@@ -91,7 +91,7 @@
   fillPrefs();
 
   const norm = s => s.normalize("NFKC").toLowerCase().replace(/\s+/g, "");
-  for (const s of stores) s._key = norm([s.name, addr(s), ...s.serials].join(" "));
+  for (const s of stores) s._key = norm([s.name, addr(s), s.address || "", ...s.serials].join(" "));
 
   let current = [];
   let distances = null;  // 店舗 id → 距離 (km)。地名検索では地点から、ヒットが少ないときはヒットした店舗からの距離

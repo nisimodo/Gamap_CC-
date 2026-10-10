@@ -411,13 +411,13 @@ def geocode_address(address, pref, cache):
 
 def apply_correction(s, corr, center, station_index, cache):
     """tools/corrections.json の手動修正。(位置, 精度, 説明) を返す。該当しなければ None"""
+    if "lat" in corr and "lng" in corr:  # 公式サイトの座標など
+        return [corr["lat"], corr["lng"]], "store", corr.get("note") or corr.get("address", "")
     if "address" in corr:
         pos = geocode_address(corr["address"], s["pref"], cache)
         if pos:
             return pos, "store", corr.get("note") or corr["address"]
         print(f"  手動修正の住所が見つかりません: {s['name']} → {corr['address']}")
-    if "lat" in corr and "lng" in corr:
-        return [corr["lat"], corr["lng"]], "store", corr.get("note", "")
     if "station" in corr:
         cands = station_index.get(norm(corr["station"]), [])
         if center:

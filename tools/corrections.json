@@ -4801,5 +4801,2357 @@
     "address": "沖縄県那覇市久茂地3-3-20 Mビル那覇国際通りI",
     "source": "https://www.gigo.co.jp/shops/naha-kokusaidori",
     "memo": "公式店舗一覧（GiGO）: GiGO那覇国際通り"
+  },
+  "ゲームランドつがる柏": {
+    "address": "青森県つがる市柏稲盛幾世41イオンモールつがる柏2F",
+    "lat": 40.802757,
+    "lng": 140.416412,
+    "source": "https://gamerch.com/maimai/533567",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ゲームランドつがる柏店"
+  },
+  "ファンタジードーム八戸": {
+    "address": "青森県八戸市江陽2-14-1",
+    "lat": 40.520836,
+    "lng": 141.503159,
+    "source": "https://gamerch.com/maimai/533567",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ファンタジードーム八戸"
+  },
+  "ユーズランド下田": {
+    "address": "青森県上北郡おいらせ町中野平40-1イオンモール下田1F",
+    "lat": 40.602257,
+    "lng": 141.41777,
+    "source": "https://gamerch.com/maimai/533567",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ユーズランド下田"
+  },
+  "ゆりの木ボウル": {
+    "address": "青森県八戸市鷹匠小路10",
+    "lat": 40.506805,
+    "lng": 141.493317,
+    "source": "https://gamerch.com/maimai/533567",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ゆりの木ボウル"
+  },
+  "アピナ富谷": {
+    "address": "宮城県富谷市大清水1丁目33‐1 109シネマズ富谷1階",
+    "lat": 38.363411,
+    "lng": 140.87381,
+    "source": "https://gamerch.com/maimai/534097",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: アピナ富谷店"
+  },
+  "ゲームコーナー東部": {
+    "address": "宮城県仙台市若林区六丁の目中町26-60 斎喜東部ビル2F",
+    "lat": 38.250778,
+    "lng": 140.943619,
+    "source": "https://gamerch.com/maimai/534097",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ゲームコーナー東部"
+  },
+  "ゲームランド佐沼": {
+    "address": "宮城県登米市南方町新島前46−1イオンタウン佐沼SC",
+    "lat": 38.682819,
+    "lng": 141.184143,
+    "source": "https://gamerch.com/maimai/534097",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ゲームランド佐沼"
+  },
+  "タイトーステーション仙台ベガロポリス": {
+    "address": "宮城県仙台市太白区西多賀5−24−1ベガロポリス内",
+    "lat": 38.218296,
+    "lng": 140.854141,
+    "source": "https://gamerch.com/maimai/534097",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: タイトーステーション仙台ベガロポリス店"
+  },
+  "バンダイナムコ Cross Store 仙台": {
+    "address": "宮城県名取市杜せきのした5−3−1イオンモール名取3F",
+    "lat": 38.163338,
+    "lng": 140.89827,
+    "source": "https://gamerch.com/maimai/534097",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: バンダイナムコＣｒｏｓｓＳｔｏｒｅ仙台"
+  },
+  "ユーズランド大河原": {
+    "address": "宮城県柴田郡大河原町小島2−1フォルテ2F",
+    "lat": 38.065529,
+    "lng": 140.737625,
+    "source": "https://gamerch.com/maimai/534097",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ユーズランド大河原店"
+  },
+  "ラウンドワン仙台苦竹": {
+    "address": "宮城県仙台市宮城野区苦竹1−7−1",
+    "lat": 38.268494,
+    "lng": 140.916473,
+    "source": "https://gamerch.com/maimai/534097",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ラウンドワン仙台苦竹店"
+  },
+  "スタジオプリモ山形": {
+    "address": "山形県山形市城南町1-1-1 霞城セントラル2F",
+    "lat": 38.24955,
+    "lng": 140.327057,
+    "source": "https://gamerch.com/maimai/534098",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: スタジオプリモ山形店"
+  },
+  "パルケデアミーゴ！": {
+    "address": "山形県山形市嶋北1-3-1",
+    "lat": 38.28405,
+    "lng": 140.321594,
+    "source": "https://gamerch.com/maimai/534098",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: パルケ・デ・アミーゴ！山形店"
+  },
+  "サープラ福島あそびタウン": {
+    "address": "福島県福島市栄町1−1 パワーシティーピボット内",
+    "lat": 37.75486,
+    "lng": 140.46022,
+    "source": "https://gamerch.com/maimai/534099",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: サープラ福島あそびタウン"
+  },
+  "嶺宝スポーツセンター": {
+    "address": "福島県いわき市小名浜住吉折返2−2",
+    "lat": 36.974174,
+    "lng": 140.890564,
+    "source": "https://gamerch.com/maimai/534099",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: 嶺宝スポーツセンター"
+  },
+  "アピナ下館": {
+    "address": "茨城県筑西市玉戸1012",
+    "lat": 36.294189,
+    "lng": 139.942108,
+    "source": "https://gamerch.com/maimai/534100",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: アピナ下館店"
+  },
+  "アミューズビバ": {
+    "address": "茨城県ひたちなか市東大島2-11-11",
+    "lat": 36.406654,
+    "lng": 140.531616,
+    "source": "https://gamerch.com/maimai/534100",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: アミューズビバ"
+  },
+  "ゲームパニックつくば": {
+    "address": "茨城県土浦市中村東1-1-1 サンタスワールド内",
+    "lat": 36.046524,
+    "lng": 140.167404,
+    "source": "https://gamerch.com/maimai/534100",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ゲームパニックつくば店"
+  },
+  "ゲームメガつくば": {
+    "address": "茨城県つくば市小野崎177-2",
+    "lat": 36.076855,
+    "lng": 140.104279,
+    "source": "https://gamerch.com/maimai/534100",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ゲームメガつくば店"
+  },
+  "ゲームメガ日立": {
+    "address": "茨城県日立市東多賀町5-10-10",
+    "lat": 36.548088,
+    "lng": 140.629745,
+    "source": "https://gamerch.com/maimai/534100",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ゲームメガ日立店"
+  },
+  "スタジオプリモマイム水戸": {
+    "address": "茨城県水戸市宮町1-2-4 マイム B1F",
+    "lat": 36.371666,
+    "lng": 140.476562,
+    "source": "https://gamerch.com/maimai/534100",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: スタジオプリモマイム水戸店"
+  },
+  "ピンクパンサー下妻": {
+    "address": "茨城県下妻市小島884-10",
+    "lat": 36.170696,
+    "lng": 139.965546,
+    "source": "https://gamerch.com/maimai/534100",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ピンクパンサー下妻店"
+  },
+  "ピンクパンサー土浦": {
+    "address": "茨城県土浦市木田余4585-3 木田余ショッピングモール内",
+    "lat": 36.107544,
+    "lng": 140.213516,
+    "source": "https://gamerch.com/maimai/534100",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ピンクパンサー土浦店"
+  },
+  "ユーズランド水戸内原": {
+    "address": "茨城県水戸市内原2-1 イオンモール水戸内原 2F",
+    "lat": 36.374561,
+    "lng": 140.358841,
+    "source": "https://gamerch.com/maimai/534100",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ユーズランド水戸内原店"
+  },
+  "楽市楽座イオンモール土浦": {
+    "address": "茨城県土浦市上高津367 イオンモール土浦SC 3階",
+    "lat": 36.08086,
+    "lng": 140.17955,
+    "source": "https://gamerch.com/maimai/534100",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: 楽市楽座イオンモール土浦店"
+  },
+  "GAME PADDOCK +1 古河本店": {
+    "address": "茨城県古河市小堤1916-1",
+    "lat": 36.206478,
+    "lng": 139.756897,
+    "source": "https://gamerch.com/maimai/534100",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: GAME PADDOCK +1 古河店"
+  },
+  "GiGO 石岡": {
+    "address": "茨城県石岡市東大橋中峯1976-1",
+    "lat": 36.1982,
+    "lng": 140.30809,
+    "source": "https://gamerch.com/maimai/534100",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: GiGO 石岡店"
+  },
+  "アピナ宇都宮": {
+    "address": "栃木県河内郡上三川町磯岡421-1 ジョイフル本田宇都宮店2階",
+    "lat": 36.482376,
+    "lng": 139.906525,
+    "source": "https://gamerch.com/maimai/534102",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: アピナ宇都宮店"
+  },
+  "アピナ小山": {
+    "address": "栃木県小山市駅南町4丁目27-18",
+    "lat": 36.299873,
+    "lng": 139.809097,
+    "source": "https://gamerch.com/maimai/534102",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: アピナ小山店"
+  },
+  "大田原スポーツランド": {
+    "address": "栃木県那須塩原市一区町104-60",
+    "lat": 36.849751,
+    "lng": 139.99173,
+    "source": "https://gamerch.com/maimai/534102",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: 大田原スポーツランド"
+  },
+  "タイトーステーション宇都宮ベルモール": {
+    "address": "栃木県宇都宮市陽東6-2-1 ベルモール宇都宮2F",
+    "lat": 36.552746,
+    "lng": 139.93161,
+    "source": "https://gamerch.com/maimai/534102",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: タイトーステーション 宇都宮ベルモール店"
+  },
+  "テクモピアパルテロン宇都宮": {
+    "address": "栃木県宇都宮市今泉町237 FKD宇都宮2階",
+    "lat": 36.573658,
+    "lng": 139.90004,
+    "source": "https://gamerch.com/maimai/534102",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: テクモピアパルテロン宇都宮店"
+  },
+  "ファンタジーランドガルー宇都宮": {
+    "address": "栃木県宇都宮市江曽島本町22-7 アピタ宇都宮店 2F",
+    "lat": 36.532841,
+    "lng": 139.86731,
+    "source": "https://gamerch.com/maimai/534102",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ファンタジーランドガルー宇都宮店"
+  },
+  "GAME GET-Bee": {
+    "address": "栃木県小山市城山町3丁目3-22 小山駅ビル2F",
+    "lat": 36.313061,
+    "lng": 139.806091,
+    "source": "https://gamerch.com/maimai/534102",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: GAME GET-Bee VAL小山店"
+  },
+  "INTER PARK +1 宇都宮": {
+    "address": "栃木県宇都宮市インターパーク6-5-1",
+    "lat": 36.487343,
+    "lng": 139.90538,
+    "source": "https://gamerch.com/maimai/534102",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: INTER PARK+1 宇都宮店"
+  },
+  "KOKADOタウン小山": {
+    "address": "栃木県小山市中久喜1467-1 イオンモール小山2F",
+    "lat": 36.321819,
+    "lng": 139.840454,
+    "source": "https://gamerch.com/maimai/534102",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: KOKADOタウン 小山店"
+  },
+  "アピナ太田": {
+    "address": "群馬県太田市内ケ島町907-1",
+    "lat": 36.282654,
+    "lng": 139.399033,
+    "source": "https://gamerch.com/maimai/534103",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: アピナ太田店"
+  },
+  "群馬レジャーランド伊勢崎": {
+    "address": "群馬県伊勢崎市連取町3066-1",
+    "lat": 36.317669,
+    "lng": 139.172409,
+    "source": "https://gamerch.com/maimai/534103",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: 群馬レジャーランド伊勢崎店"
+  },
+  "群馬レジャーランド渋川": {
+    "address": "群馬県渋川市八木原1364",
+    "lat": 36.474224,
+    "lng": 139.015396,
+    "source": "https://gamerch.com/maimai/534103",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: 群馬レジャーランド渋川店"
+  },
+  "群馬レジャーランド高崎駅東口": {
+    "address": "群馬県高崎市江木町333-1高崎EXビル2F・B1F",
+    "lat": 36.329407,
+    "lng": 139.01297,
+    "source": "https://gamerch.com/maimai/534103",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: 群馬レジャーランド高崎駅東口店"
+  },
+  "群馬レジャーランド前橋": {
+    "address": "群馬県前橋市日吉町4-37-1",
+    "lat": 36.405106,
+    "lng": 139.079147,
+    "source": "https://gamerch.com/maimai/534103",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: 群馬レジャーランド前橋店"
+  },
+  "ユーズランド太田": {
+    "address": "群馬県太田市石原町81番地イオンモール太田 2F",
+    "lat": 36.294003,
+    "lng": 139.400223,
+    "source": "https://gamerch.com/maimai/534103",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ユーズランド太田店"
+  },
+  "ユーズランド高崎": {
+    "address": "群馬県高崎市棟高町1400 イオンモール高崎2F",
+    "lat": 36.390381,
+    "lng": 139.006577,
+    "source": "https://gamerch.com/maimai/534103",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ユーズランド高崎店"
+  },
+  "アドアーズ和光": {
+    "address": "埼玉県和光市本町3-5 ワコーステーション3 1-3F",
+    "lat": 35.788486,
+    "lng": 139.611603,
+    "source": "https://gamerch.com/maimai/939979",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: アドアーズ和光店"
+  },
+  "アドアーズ蕨": {
+    "address": "埼玉県蕨市塚越1-4-4 ラ・セーヌビル 2階",
+    "lat": 35.827904,
+    "lng": 139.691437,
+    "source": "https://gamerch.com/maimai/939979",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: アドアーズ蕨店"
+  },
+  "アピナ川越": {
+    "address": "埼玉県川越市泉町1-1 ウニクス南古谷 シネマ棟1F",
+    "lat": 35.905621,
+    "lng": 139.513016,
+    "source": "https://gamerch.com/maimai/939979",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: アピナ川越店"
+  },
+  "アミューズメントクラブ浦和": {
+    "address": "埼玉県さいたま市浦和区仲町1-10-7",
+    "lat": 35.860275,
+    "lng": 139.653397,
+    "source": "https://gamerch.com/maimai/939979",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: アミューズメントクラブ浦和"
+  },
+  "アミューズメントフィールドバイヨン": {
+    "address": "埼玉県ふじみ野市うれし野2-16-1 LCモールうれし野 2F",
+    "lat": 35.855995,
+    "lng": 139.522141,
+    "source": "https://gamerch.com/maimai/939979",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: アミューズメントフィールドバイヨン"
+  },
+  "アミューズランドモナコ川越": {
+    "address": "埼玉県川越市新富町2-4-1",
+    "lat": 35.913136,
+    "lng": 139.483154,
+    "source": "https://gamerch.com/maimai/939979",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: アミューズランドモナコ川越店"
+  },
+  "ウェアハウス上尾": {
+    "address": "埼玉県上尾市二ツ宮1044",
+    "lat": 35.980858,
+    "lng": 139.59996,
+    "source": "https://gamerch.com/maimai/939979",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ウェアハウス上尾店"
+  },
+  "ウェアハウス岩槻": {
+    "address": "埼玉県さいたま市岩槻区加倉3ー3ー63",
+    "lat": 35.94075,
+    "lng": 139.68544,
+    "source": "https://gamerch.com/maimai/939979",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ウェアハウス岩槻店"
+  },
+  "ウェアハウス越谷": {
+    "address": "埼玉県越谷市南荻島841番地1",
+    "lat": 35.912285,
+    "lng": 139.763367,
+    "source": "https://gamerch.com/maimai/934419",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ウェアハウス越谷店"
+  },
+  "ウェアハウス草加店別館": {
+    "address": "埼玉県草加市稲荷2-36-33(別館)埼玉県八潮市南後谷507(本館)*4",
+    "lat": 35.830048,
+    "lng": 139.821014,
+    "source": "https://gamerch.com/maimai/934419",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ウェアハウス草加店別館"
+  },
+  "ウェアハウス三橋": {
+    "address": "埼玉県さいたま市西区三橋6-955-1",
+    "lat": 35.916557,
+    "lng": 139.595139,
+    "source": "https://gamerch.com/maimai/939979",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ウェアハウス三橋店"
+  },
+  "ギガステーション戸田": {
+    "address": "埼玉県戸田市大字美女木943-7",
+    "lat": 35.829967,
+    "lng": 139.639557,
+    "source": "https://gamerch.com/maimai/934419",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ギガステーション戸田店"
+  },
+  "キャロム坂戸": {
+    "address": "埼玉県坂戸市関間2-151-1",
+    "lat": 35.952499,
+    "lng": 139.399445,
+    "source": "https://gamerch.com/maimai/934419",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: キャロム坂戸店"
+  },
+  "キャロム所沢": {
+    "address": "埼玉県所沢市下安松969-1",
+    "lat": 35.791145,
+    "lng": 139.503815,
+    "source": "https://gamerch.com/maimai/939979",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: キャロム所沢店"
+  },
+  "ゲームシティ川口": {
+    "address": "埼玉県川口市栄町1-10-5",
+    "lat": 35.802711,
+    "lng": 139.725372,
+    "source": "https://gamerch.com/maimai/939979",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ゲームシティ川口店"
+  },
+  "ゲームパニック三郷": {
+    "address": "埼玉県三郷市ピアラシティ1丁目1-200 ピアラシティみさと内",
+    "lat": 35.842663,
+    "lng": 139.855316,
+    "source": "https://gamerch.com/maimai/934419",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ゲームパニック三郷店"
+  },
+  "ゲームファクトリーマグマ草加": {
+    "address": "埼玉県草加市氷川町2125-1",
+    "lat": 35.828304,
+    "lng": 139.802429,
+    "source": "https://gamerch.com/maimai/934419",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ゲームファクトリーマグマ草加店"
+  },
+  "サープラ八潮あそびタウン": {
+    "address": "埼玉県八潮市大瀬1-1-3 フレスポ八潮3F",
+    "lat": 35.808826,
+    "lng": 139.842911,
+    "source": "https://gamerch.com/maimai/934419",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: サープラ八潮あそびタウン"
+  },
+  "埼玉レジャーランド大宮ラクーン": {
+    "address": "埼玉県さいたま市大宮区宮町1-60 大宮ラクーン 5階",
+    "lat": 35.907829,
+    "lng": 139.625732,
+    "source": "https://gamerch.com/maimai/939979",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: 埼玉レジャーランド大宮ラクーン店"
+  },
+  "シルクハット川口": {
+    "address": "埼玉県川口市栄町3-1-16 イート川口ビル4F",
+    "lat": 35.803185,
+    "lng": 139.717651,
+    "source": "https://gamerch.com/maimai/939979",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: シルクハット川口店"
+  },
+  "スイーツファンタジーパックン東松山": {
+    "address": "埼玉県東松山市あずま町4-3 ピオニウォーク東松山店2F",
+    "lat": 36.005379,
+    "lng": 139.410278,
+    "source": "https://gamerch.com/maimai/934419",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: スイーツファンタジーパックン東松山店"
+  },
+  "タイトーステーション大宮": {
+    "address": "埼玉県さいたま市大宮区大門町1-1",
+    "lat": 35.907394,
+    "lng": 139.625595,
+    "source": "https://gamerch.com/maimai/939979",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: タイトーステーション 大宮店"
+  },
+  "タイトーステーション所沢": {
+    "address": "埼玉県所沢市日吉町3-7 スカイビュウビル",
+    "lat": 35.787949,
+    "lng": 139.472183,
+    "source": "https://gamerch.com/maimai/939979",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: タイトーステーション 所沢店"
+  },
+  "テクモピア川越": {
+    "address": "埼玉県川越市脇田町4-2 ドン・キホーテ川越東口店3F",
+    "lat": 35.909069,
+    "lng": 139.48288,
+    "source": "https://gamerch.com/maimai/939979",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: テクモピア川越店"
+  },
+  "パラボランド上尾ショーサンプラザ": {
+    "address": "埼玉県上尾市谷津2−1−1ショーサンプラザ5階",
+    "lat": 35.971565,
+    "lng": 139.588165,
+    "source": "https://gamerch.com/maimai/939979",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: パラボランド上尾ショーサンプラザ店"
+  },
+  "プリモピア鴻巣": {
+    "address": "埼玉県鴻巣市北新宿225-1 ウニクス鴻巣1F",
+    "lat": 36.112499,
+    "lng": 139.440231,
+    "source": "https://gamerch.com/maimai/934419",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: プリモピア鴻巣店"
+  },
+  "ユーズランド春日部": {
+    "address": "埼玉県春日部市下柳420-1 イオンモール春日部2F",
+    "lat": 35.987576,
+    "lng": 139.788605,
+    "source": "https://gamerch.com/maimai/934419",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ユーズランド春日部店"
+  },
+  "ユーズランド越谷": {
+    "address": "埼玉県越谷市レイクタウン4丁目2番地2 イオンレイクタウンKAZE 3F",
+    "lat": 35.877773,
+    "lng": 139.825058,
+    "source": "https://gamerch.com/maimai/934419",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ユーズランド越谷店"
+  },
+  "ラウンドワン大宮": {
+    "address": "埼玉県さいたま市大宮区宮町4-90-7",
+    "lat": 35.911053,
+    "lng": 139.625259,
+    "source": "https://gamerch.com/maimai/939979",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ラウンドワン大宮店"
+  },
+  "ラウンドワンさいたま・上里": {
+    "address": "埼玉県児玉郡上里町大字金久保394-1 イオンタウン上里内",
+    "lat": 36.260586,
+    "lng": 139.136673,
+    "source": "https://gamerch.com/maimai/934419",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ラウンドワンさいたま・上里店"
+  },
+  "ラウンドワン草加": {
+    "address": "埼玉県草加市谷塚上町204番地1",
+    "lat": 35.812424,
+    "lng": 139.788071,
+    "source": "https://gamerch.com/maimai/934419",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ラウンドワン草加店"
+  },
+  "ラウンドワンわらび": {
+    "address": "埼玉県蕨市北町5-1-6",
+    "lat": 35.83065,
+    "lng": 139.674088,
+    "source": "https://gamerch.com/maimai/939979",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ラウンドワンわらび店"
+  },
+  "アピナ市原": {
+    "address": "千葉県市原市更級4丁目2-1アクロスプラザ市原更級 F棟 1階",
+    "lat": 35.509975,
+    "lng": 140.101288,
+    "source": "https://gamerch.com/maimai/533395",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: アピナ市原店"
+  },
+  "アピナ印西": {
+    "address": "千葉県印西市原1丁目2 BIGHOPガーデンモール印西 2階",
+    "lat": 35.803074,
+    "lng": 140.164886,
+    "source": "https://gamerch.com/maimai/533395",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: アピナ印西店"
+  },
+  "アミューズメントパフェパレパレ稲毛長沼": {
+    "address": "千葉県千葉市稲毛区長沼原町731-17フレスポ稲毛A2棟4",
+    "lat": 35.65575,
+    "lng": 140.127365,
+    "source": "https://gamerch.com/maimai/533395",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: パレパレ稲毛長沼店"
+  },
+  "イスカンダル木更津": {
+    "address": "千葉県木更津市潮見4-1-2",
+    "lat": 35.369198,
+    "lng": 139.917618,
+    "source": "https://gamerch.com/maimai/533395",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: イスカンダル木更津店"
+  },
+  "柏ヤングボウル": {
+    "address": "千葉県柏市南柏中央11-1",
+    "lat": 35.845867,
+    "lng": 139.956375,
+    "source": "https://gamerch.com/maimai/533395",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: 柏ヤングボウル"
+  },
+  "キャッツアイ東千葉": {
+    "address": "千葉県千葉市中央区祐光3丁目2-1 ヤマザワ千葉ビル",
+    "lat": 35.619232,
+    "lng": 140.126862,
+    "source": "https://gamerch.com/maimai/533395",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: キャッツアイ東千葉店"
+  },
+  "キャッツアイ八千代": {
+    "address": "千葉県八千代市吉橋1851 ism緑ヶ丘内",
+    "lat": 35.737286,
+    "lng": 140.075104,
+    "source": "https://gamerch.com/maimai/533395",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: キャッツアイ八千代店"
+  },
+  "ゲームチャリオット五井": {
+    "address": "千葉県市原市五井中央西2-1-2",
+    "lat": 35.513294,
+    "lng": 140.090088,
+    "source": "https://gamerch.com/maimai/533395",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: チャリオット五井店"
+  },
+  "ゲームランド千葉ニュータウン": {
+    "address": "千葉県印西市中央北3-2 イオンモール千葉ニュータウン モール棟 3F",
+    "lat": 35.802212,
+    "lng": 140.112183,
+    "source": "https://gamerch.com/maimai/533395",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ゲームランド千葉ニュータウン店"
+  },
+  "ゲームランドちはら台": {
+    "address": "千葉県市原市ちはら台西3-4ショッピングモールunimoちはら台 2F",
+    "lat": 35.528172,
+    "lng": 140.171539,
+    "source": "https://gamerch.com/maimai/533395",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ゲームランドちはら台店"
+  },
+  "シルクハット津田沼": {
+    "address": "千葉県習志野市津田沼1-2-1 十三ビルB1F",
+    "lat": 35.690063,
+    "lng": 140.022247,
+    "source": "https://gamerch.com/maimai/533395",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: シルクハット津田沼"
+  },
+  "スタジオプリモ本八幡": {
+    "address": "千葉県市川市八幡2-15-10 パティオ本八幡 5階",
+    "lat": 35.721352,
+    "lng": 139.927353,
+    "source": "https://gamerch.com/maimai/533395",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: スタジオプリモ本八幡店"
+  },
+  "スポーツウェーブ鉄腕24浜野": {
+    "address": "千葉県千葉市中央区浜野町1025-59D'station浜野店 2F",
+    "lat": 35.555183,
+    "lng": 140.122009,
+    "source": "https://gamerch.com/maimai/533395",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: スポーツウェーブ鉄腕24浜野店"
+  },
+  "ソユープレイランドソピア幕張": {
+    "address": "千葉県千葉市花見川区幕張町4丁目417-25イトーヨーカドー幕張店 2階",
+    "lat": 35.65641,
+    "lng": 140.051163,
+    "source": "https://gamerch.com/maimai/533395",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ソユープレイランドソピア幕張店"
+  },
+  "タイトーステーション船橋": {
+    "address": "千葉県船橋市本町1-6-1 第125東京ビル",
+    "lat": 35.699833,
+    "lng": 139.98613,
+    "source": "https://gamerch.com/maimai/533395",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: タイトーステーション 船橋店"
+  },
+  "館山ヤングボウル": {
+    "address": "千葉県館山市北条1564",
+    "lat": 34.991135,
+    "lng": 139.867599,
+    "source": "https://gamerch.com/maimai/533395",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: 館山ヤングボウル"
+  },
+  "千葉レジャーランド成東": {
+    "address": "千葉県山武市姫島111-1",
+    "lat": 35.588505,
+    "lng": 140.389954,
+    "source": "https://gamerch.com/maimai/533395",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: 千葉レジャーランド成東店"
+  },
+  "テクモピア船橋南口": {
+    "address": "千葉県船橋市本町1丁目7-6 ドリーム船橋ビル 3F",
+    "lat": 35.698986,
+    "lng": 139.985931,
+    "source": "https://gamerch.com/maimai/533395",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: テクモピア船橋南口店"
+  },
+  "テクモピアロックダム公津の杜": {
+    "address": "千葉県成田市公津の杜4-5-3 成田ユアエルム3F",
+    "lat": 35.759411,
+    "lng": 140.296722,
+    "source": "https://gamerch.com/maimai/533395",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: テクモピアロックダム公津の杜店"
+  },
+  "パラボランド東金": {
+    "address": "千葉県東金市東岩崎8番地10 サンピア 3F",
+    "lat": 35.558624,
+    "lng": 140.364609,
+    "source": "https://gamerch.com/maimai/533395",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: パラボランド東金店"
+  },
+  "八街ヤングボウル": {
+    "address": "千葉県八街市八街ほ380番地11",
+    "lat": 35.651043,
+    "lng": 140.318954,
+    "source": "https://gamerch.com/maimai/533395",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: 八街ヤングボウル"
+  },
+  "ラウンドワン市川鬼高": {
+    "address": "千葉県市川市鬼高4丁目1-3",
+    "lat": 35.711868,
+    "lng": 139.927368,
+    "source": "https://gamerch.com/maimai/533395",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ラウンドワン市川鬼高店"
+  },
+  "ラウンドワン市原": {
+    "address": "千葉県市原市八幡北町三丁目5番1",
+    "lat": 35.547577,
+    "lng": 140.123245,
+    "source": "https://gamerch.com/maimai/533395",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ラウンドワン市原店"
+  },
+  "ラウンドワン習志野": {
+    "address": "千葉県習志野市芝園1丁目4番5号",
+    "lat": 35.660332,
+    "lng": 140.021912,
+    "source": "https://gamerch.com/maimai/533395",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ラウンドワン習志野店"
+  },
+  "ラッキー佐倉": {
+    "address": "千葉県佐倉市井野1475",
+    "lat": 35.718021,
+    "lng": 140.134659,
+    "source": "https://gamerch.com/maimai/533395",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ラッキー佐倉店"
+  },
+  "ラッキー中央店フェリシダ": {
+    "address": "千葉県千葉市中央区富士見2-8-1",
+    "lat": 35.610371,
+    "lng": 140.118149,
+    "source": "https://gamerch.com/maimai/533395",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ラッキー中央店・フェリシダ"
+  },
+  "DAIKEIEN": {
+    "address": "千葉県市川市大町358",
+    "lat": 35.763184,
+    "lng": 139.968414,
+    "source": "https://gamerch.com/maimai/533395",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: DAIKEIEN"
+  },
+  "ゲームプラザセントラル浦安": {
+    "address": "千葉県浦安市北栄1-16-15第四セントラルビル",
+    "lat": 35.665199,
+    "lng": 139.893234,
+    "source": "https://gamerch.com/maimai/533395",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ゲームプラザセントラル浦安店"
+  },
+  "アドアーズ上野アメ横": {
+    "address": "東京都台東区上野4-9-14Gビル上野01 B1~4F",
+    "lat": 35.710018,
+    "lng": 139.774445,
+    "source": "https://gamerch.com/maimai/534657",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: アドアーズ上野アメ横店"
+  },
+  "アドアーズ亀戸": {
+    "address": "東京都江東区亀戸5-2-6サンエービル 1~5F",
+    "lat": 35.69894,
+    "lng": 139.825714,
+    "source": "https://gamerch.com/maimai/534657",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: アドアーズ亀戸店"
+  },
+  "アドアーズ新小岩": {
+    "address": "東京都葛飾区新小岩1-44-4VORT新小岩ビル B1F~3F",
+    "lat": 35.716377,
+    "lng": 139.858154,
+    "source": "https://gamerch.com/maimai/534657",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: アドアーズ新小岩"
+  },
+  "アドアーズ中野": {
+    "address": "東京都中野区中野5丁目52-15ブロードウェイ185 1F",
+    "lat": 35.709923,
+    "lng": 139.665665,
+    "source": "https://gamerch.com/maimai/938987",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: アドアーズ中野店"
+  },
+  "アピナ成増": {
+    "address": "東京都板橋区成増二丁目21番2号MEGAドン・キホーテ成増店 5F",
+    "lat": 35.777725,
+    "lng": 139.630417,
+    "source": "https://gamerch.com/maimai/938987",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: アピナ成増店"
+  },
+  "ウェアハウス入谷": {
+    "address": "東京都足立区入谷7-8-11",
+    "lat": 35.801506,
+    "lng": 139.760727,
+    "source": "https://gamerch.com/maimai/534657",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ウェアハウス入谷店"
+  },
+  "ウェアハウス保木間": {
+    "address": "東京都足立区保木間1-1-19",
+    "lat": 35.78896,
+    "lng": 139.803146,
+    "source": "https://gamerch.com/maimai/534657",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ウェアハウス保木間店"
+  },
+  "江戸川ヤングボウル": {
+    "address": "東京都江戸川区中央4-22-25",
+    "lat": 35.711006,
+    "lng": 139.869705,
+    "source": "https://gamerch.com/maimai/534657",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: 江戸川ヤングボウル"
+  },
+  "キャッツアイ西葛西": {
+    "address": "東京都江戸川区西葛西4-2-28サニーモール西葛西店3F",
+    "lat": 35.668137,
+    "lng": 139.861313,
+    "source": "https://gamerch.com/maimai/534657",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: キャッツアイ西葛西店"
+  },
+  "ゲームパニック秋葉原": {
+    "address": "東京都千代田区外神田1-13-1Akihabara ex",
+    "lat": 35.698811,
+    "lng": 139.7715,
+    "source": "https://gamerch.com/maimai/938987",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ゲームパニック秋葉原"
+  },
+  "ゲームW": {
+    "address": "東京都豊島区南長崎5-27-6",
+    "lat": 35.729118,
+    "lng": 139.682953,
+    "source": "https://gamerch.com/maimai/938987",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ゲームＷ"
+  },
+  "シルクハット蒲田西口": {
+    "address": "東京都大田区西蒲田7-2-3第2醍醐ビルB1〜2F",
+    "lat": 35.563076,
+    "lng": 139.716019,
+    "source": "https://gamerch.com/maimai/938987",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: シルクハット蒲田西口店"
+  },
+  "新宿スポーツランド本館": {
+    "address": "東京都新宿区新宿3-22-12",
+    "lat": 35.693253,
+    "lng": 139.701965,
+    "source": "https://gamerch.com/maimai/938987",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: 新宿スポーツランド本館"
+  },
+  "タイトーステーション秋葉原": {
+    "address": "東京都千代田区外神田4-2-2貴三ビル",
+    "lat": 35.700222,
+    "lng": 139.771667,
+    "source": "https://gamerch.com/maimai/938987",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: タイトーステーション 秋葉原店"
+  },
+  "タイトーステーション池袋西口": {
+    "address": "東京都豊島区西池袋1-15-9第一西池ビル",
+    "lat": 35.730598,
+    "lng": 139.709763,
+    "source": "https://gamerch.com/maimai/938987",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: タイトーステーション 池袋西口店"
+  },
+  "タイトーステーション上野アメ横": {
+    "address": "東京都台東区上野4-10-17",
+    "lat": 35.710522,
+    "lng": 139.774475,
+    "source": "https://gamerch.com/maimai/534657",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: タイトーステーション 上野アメ横店"
+  },
+  "タイトーステーション錦糸町楽天地": {
+    "address": "東京都墨田区江東橋4-27-14楽天地ビルB1F",
+    "lat": 35.696064,
+    "lng": 139.815231,
+    "source": "https://gamerch.com/maimai/534657",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: タイトーステーション 錦糸町楽天地店"
+  },
+  "タイトーステーション新宿南口ゲームワールド": {
+    "address": "東京都新宿区新宿3-35-8",
+    "lat": 35.689888,
+    "lng": 139.702194,
+    "source": "https://gamerch.com/maimai/938987",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: タイトーステーション 新宿南口ゲームワールド店"
+  },
+  "タイトーステーションBIGBOX高田馬場": {
+    "address": "東京都新宿区高田馬場1-35-6BIGBOX高田馬場6F",
+    "lat": 35.712494,
+    "lng": 139.703873,
+    "source": "https://gamerch.com/maimai/938987",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: タイトーステーション BIGBOX高田馬場店"
+  },
+  "タイトーステーションBIGFUN平和島": {
+    "address": "東京都大田区平和島1丁目1-1BIGFUN平和島 3F",
+    "lat": 35.584396,
+    "lng": 139.740753,
+    "source": "https://gamerch.com/maimai/938987",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: タイトーステーションBIGFUN平和島店"
+  },
+  "東京ジョイポリス": {
+    "address": "東京都港区台場1-6-1デックス東京ビーチ4F",
+    "lat": 35.629063,
+    "lng": 139.775894,
+    "source": "https://gamerch.com/maimai/938987",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: 東京ジョイポリス"
+  },
+  "東京レジャーランド池袋": {
+    "address": "東京都豊島区東池袋1-29-1サントロペ池袋B1~3F",
+    "lat": 35.730293,
+    "lng": 139.716522,
+    "source": "https://gamerch.com/maimai/938987",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: 東京レジャーランド池袋店"
+  },
+  "東京レジャーランド亀有": {
+    "address": "東京都葛飾区亀有3-21-2",
+    "lat": 35.765427,
+    "lng": 139.847931,
+    "source": "https://gamerch.com/maimai/534657",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: 東京レジャーランド亀有店"
+  },
+  "ラウンドワン池袋": {
+    "address": "東京都豊島区東池袋1-14-1池袋スクエア",
+    "lat": 35.729897,
+    "lng": 139.71521,
+    "source": "https://gamerch.com/maimai/938987",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ラウンドワン池袋店"
+  },
+  "ラウンドワン南砂": {
+    "address": "東京都江東区南砂6-7-15トピレックプラザ4F",
+    "lat": 35.672672,
+    "lng": 139.835953,
+    "source": "https://gamerch.com/maimai/534657",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ラウンドワン南砂店"
+  },
+  "アピナ八王子みなみ野": {
+    "address": "東京都八王子市みなみ野1-2-1アクロスモール八王子みなみ野3F",
+    "lat": 35.63015,
+    "lng": 139.329712,
+    "source": "https://gamerch.com/maimai/534485",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: アピナ八王子みなみ野店"
+  },
+  "アミューズランドモナコ調布駅前": {
+    "address": "東京都調布市布田4-2-22",
+    "lat": 35.651218,
+    "lng": 139.544357,
+    "source": "https://gamerch.com/maimai/534485",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: アミューズランドモナコ調布駅前店"
+  },
+  "キャロム青梅": {
+    "address": "東京都青梅市千ケ瀬町4-326-1",
+    "lat": 35.786045,
+    "lng": 139.270126,
+    "source": "https://gamerch.com/maimai/534485",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: キャロム青梅店"
+  },
+  "タイトーステーション国分寺": {
+    "address": "東京都国分寺市本町3-5-11",
+    "lat": 35.7019,
+    "lng": 139.480133,
+    "source": "https://gamerch.com/maimai/534485",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: タイトーステーション国分寺店"
+  },
+  "タイトーステーション立川北口": {
+    "address": "東京都立川市曙町2-4-5OSJ TACHIKAWAビル 2~3F",
+    "lat": 35.69865,
+    "lng": 139.412354,
+    "source": "https://gamerch.com/maimai/534485",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: タイトーステーション立川北口店"
+  },
+  "タイトーステーション町田": {
+    "address": "東京都町田市原町田6-21-23松山ビル1階",
+    "lat": 35.5425,
+    "lng": 139.448318,
+    "source": "https://gamerch.com/maimai/534485",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: タイトーステーション 町田店"
+  },
+  "東京レジャーランド吉祥寺": {
+    "address": "東京都武蔵野市吉祥寺本町1-3-7YSビル地下1階~4階",
+    "lat": 35.703575,
+    "lng": 139.578735,
+    "source": "https://gamerch.com/maimai/534485",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: 東京レジャーランド吉祥寺店"
+  },
+  "ユーズランド日の出": {
+    "address": "東京都西多摩郡日の出町大字平井237-3イオンモール日の出3F",
+    "lat": 35.734825,
+    "lng": 139.275146,
+    "source": "https://gamerch.com/maimai/534485",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ユーズランド日の出店"
+  },
+  "ラウンドワン吉祥寺": {
+    "address": "東京都武蔵野市吉祥寺本町1-11-22",
+    "lat": 35.706291,
+    "lng": 139.581085,
+    "source": "https://gamerch.com/maimai/534485",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ラウンドワン吉祥寺店"
+  },
+  "ラウンドワン府中本町駅前": {
+    "address": "東京都府中市本町1-13-3カネタビル",
+    "lat": 35.667145,
+    "lng": 139.477386,
+    "source": "https://gamerch.com/maimai/534485",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ラウンドワン府中本町駅前"
+  },
+  "ラウンドワン町田": {
+    "address": "東京都町田市森野1-13-14",
+    "lat": 35.544449,
+    "lng": 139.443054,
+    "source": "https://gamerch.com/maimai/534485",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ラウンドワン町田店"
+  },
+  "NICOPA＆nico ground イーアス高尾": {
+    "address": "東京都八王子市東浅川町550-1イーアス高尾2F",
+    "lat": 35.643543,
+    "lng": 139.289185,
+    "source": "https://gamerch.com/maimai/534485",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: NICOPA & nico ground イーアス高尾店"
+  },
+  "アドアーズ橋本": {
+    "address": "神奈川県相模原市緑区橋本3-3-1SINGビル2F",
+    "lat": 35.594063,
+    "lng": 139.349304,
+    "source": "https://gamerch.com/maimai/810141",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: アドアーズ橋本店"
+  },
+  "アドアーズ大和店Ａ館": {
+    "address": "神奈川県大和市大和東1丁目4-3大黒屋ビル 1~2F",
+    "lat": 35.470566,
+    "lng": 139.462219,
+    "source": "https://gamerch.com/maimai/810141",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: アドアーズ大和店A館"
+  },
+  "アドアーズ横須賀": {
+    "address": "神奈川県横須賀市本町3丁目27横須賀APT 1階",
+    "lat": 35.281178,
+    "lng": 139.662613,
+    "source": "https://gamerch.com/maimai/810141",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: アドアーズ横須賀店"
+  },
+  "アピナ橋本": {
+    "address": "神奈川県相模原市緑区西橋本5-1-1ラ・フロール駐車場棟 1階",
+    "lat": 35.597233,
+    "lng": 139.337524,
+    "source": "https://gamerch.com/maimai/810141",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: アピナ橋本店"
+  },
+  "アミューズメントパラダイスシティ": {
+    "address": "神奈川県横浜市旭区二俣川1-43-28アルコット二俣川 5F",
+    "lat": 35.464687,
+    "lng": 139.53183,
+    "source": "https://gamerch.com/maimai/810141",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: パラダイス・シティ"
+  },
+  "イミグランデ日吉": {
+    "address": "神奈川県横浜市港北区日吉2-2-4",
+    "lat": 35.553951,
+    "lng": 139.646378,
+    "source": "https://gamerch.com/maimai/810141",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: イミグランデ日吉店"
+  },
+  "イミグランデ日吉３号館": {
+    "address": "神奈川県横浜市港北区日吉2-2-4",
+    "lat": 35.553951,
+    "lng": 139.646378,
+    "source": "https://gamerch.com/maimai/810141",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: イミグランデ日吉店"
+  },
+  "イミグランデ溝口２": {
+    "address": "神奈川県川崎市高津区溝口1-14-7第二カスタムビル",
+    "lat": 35.600361,
+    "lng": 139.614304,
+    "source": "https://gamerch.com/maimai/810141",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: イミグランデ溝口店"
+  },
+  "神奈川レジャーランド厚木": {
+    "address": "神奈川県厚木市戸室5-31-1アツギ・トレリス内",
+    "lat": 35.448647,
+    "lng": 139.343338,
+    "source": "https://gamerch.com/maimai/810141",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: 神奈川レジャーランド厚木店"
+  },
+  "サープラ横浜あそびタウン": {
+    "address": "神奈川県横浜市都筑区中川中央1丁目25-1ノースポート・モール 6F",
+    "lat": 35.553181,
+    "lng": 139.579468,
+    "source": "https://gamerch.com/maimai/810141",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: サープラ横浜あそびタウン"
+  },
+  "シルクハット伊勢佐木町": {
+    "address": "神奈川県横浜市中区伊勢佐木町3-96日活会館 3階",
+    "lat": 35.442764,
+    "lng": 139.630295,
+    "source": "https://gamerch.com/maimai/810141",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: シルクハット伊勢佐木町店"
+  },
+  "シルクハット海老名マルイ": {
+    "address": "神奈川県海老名市中央1丁目6-1海老名マルイ2F",
+    "lat": 35.452747,
+    "lng": 139.393127,
+    "source": "https://gamerch.com/maimai/810141",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: シルクハット海老名マルイ店"
+  },
+  "シルクハット川崎ダイス": {
+    "address": "神奈川県川崎市川崎区駅前本町8番地ダイスビルB2F",
+    "lat": 35.531353,
+    "lng": 139.70015,
+    "source": "https://gamerch.com/maimai/810141",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: シルクハット川崎ダイス"
+  },
+  "タイトーステーション小田原": {
+    "address": "神奈川県小田原市栄町1-3-12",
+    "lat": 35.254986,
+    "lng": 139.156113,
+    "source": "https://gamerch.com/maimai/810141",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: タイトーステーション 小田原店"
+  },
+  "タイトーステーション戸塚西口": {
+    "address": "神奈川県横浜市戸塚区戸塚町4023",
+    "lat": 35.39959,
+    "lng": 139.531601,
+    "source": "https://gamerch.com/maimai/810141",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: タイトーステーション戸塚西口店"
+  },
+  "タイトーステーション藤沢": {
+    "address": "神奈川県藤沢市南藤沢21-1",
+    "lat": 35.337761,
+    "lng": 139.487442,
+    "source": "https://gamerch.com/maimai/810141",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: タイトーステーション 藤沢店"
+  },
+  "タイトーステーション溝の口": {
+    "address": "神奈川県川崎市高津区溝口1-11-8OKKA634ビル 1F~3F",
+    "lat": 35.60014,
+    "lng": 139.612289,
+    "source": "https://gamerch.com/maimai/810141",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: タイトーステーション 溝の口店"
+  },
+  "タイトーステーション横浜西口五番街": {
+    "address": "神奈川県横浜市西区南幸1-12-9",
+    "lat": 35.464767,
+    "lng": 139.619583,
+    "source": "https://gamerch.com/maimai/810141",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: タイトーステーション横浜西口五番街店"
+  },
+  "テクモピア座間": {
+    "address": "神奈川県座間市ひばりが丘4-11-48",
+    "lat": 35.479923,
+    "lng": 139.431671,
+    "source": "https://gamerch.com/maimai/810141",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: テクモピア座間店"
+  },
+  "プレイランド川崎": {
+    "address": "神奈川県川崎市川崎区小田栄2-2-1イトーヨーカドー川崎店3F",
+    "lat": 35.515194,
+    "lng": 139.707886,
+    "source": "https://gamerch.com/maimai/810141",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: プレイランド川崎店"
+  },
+  "プレイランド大和鶴間": {
+    "address": "神奈川県大和市下鶴間1丁目3-1イトーヨーカドー大和鶴間店3F",
+    "lat": 35.490524,
+    "lng": 139.457245,
+    "source": "https://gamerch.com/maimai/810141",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: プレイランド大和鶴間店"
+  },
+  "メルヘンランドコーナン鎌倉大船": {
+    "address": "神奈川県鎌倉市岡本1188番地1コーナン鎌倉大船パーク2F",
+    "lat": 35.346798,
+    "lng": 139.517532,
+    "source": "https://gamerch.com/maimai/810141",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: メルヘンランド コーナン鎌倉大船店"
+  },
+  "ラウンドワン横浜綱島": {
+    "address": "神奈川県横浜市港北区樽町2-6-40T-PLATZ内",
+    "lat": 35.531673,
+    "lng": 139.636917,
+    "source": "https://gamerch.com/maimai/810141",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ラウンドワン横浜綱島店"
+  },
+  "カプコサーカス新潟東": {
+    "address": "新潟県新潟市東区大形本町3-1-2 イオン新潟東店",
+    "lat": 37.924152,
+    "lng": 139.113754,
+    "source": "https://gamerch.com/maimai/904659",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: カプコサーカス新潟東店"
+  },
+  "メジャーロード黒埼": {
+    "address": "新潟県新潟市西区山田3303番地(3302番地)",
+    "lat": 37.875507,
+    "lng": 139.018005,
+    "source": "https://gamerch.com/maimai/904659",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: メジャーロード黒埼"
+  },
+  "メジャーロード白根": {
+    "address": "新潟県新潟市南区上下諏訪木論地948−2",
+    "lat": 37.759808,
+    "lng": 139.022614,
+    "source": "https://gamerch.com/maimai/904659",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: メジャーロード白根"
+  },
+  "アピナ富山新庄": {
+    "address": "富山県富山市荒川3-2-12",
+    "lat": 36.696198,
+    "lng": 137.248169,
+    "source": "https://gamerch.com/maimai/533729",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: アピナ富山新庄店"
+  },
+  "アピナ富山豊田": {
+    "address": "富山県富山市豊田町2丁目12-66",
+    "lat": 36.721424,
+    "lng": 137.234711,
+    "source": "https://gamerch.com/maimai/533729",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: アピナ富山豊田店"
+  },
+  "アピナ富山南": {
+    "address": "富山県富山市堀川町355-3 マイプラザ内",
+    "lat": 36.664803,
+    "lng": 137.217743,
+    "source": "https://gamerch.com/maimai/533729",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: アピナ富山南店"
+  },
+  "アピナ野々市": {
+    "address": "石川県野々市市白山町4-1 イオンタウン野々市内",
+    "lat": 36.526802,
+    "lng": 136.613159,
+    "source": "https://gamerch.com/maimai/940734",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: アピナ野々市店"
+  },
+  "アル・プラザボウル鯖江": {
+    "address": "福井県鯖江市下河端町16字下町6-1",
+    "lat": 35.968861,
+    "lng": 136.18956,
+    "source": "https://gamerch.com/maimai/533404",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: アル・プラザボウル鯖江"
+  },
+  "福井レジャーランド板垣": {
+    "address": "福井県福井市下馬3-102",
+    "lat": 36.042137,
+    "lng": 136.233826,
+    "source": "https://gamerch.com/maimai/533404",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: 福井レジャーランド板垣店"
+  },
+  "ゲームパニック甲府": {
+    "address": "山梨県甲府市国母5-20-24",
+    "lat": 35.641552,
+    "lng": 138.547287,
+    "source": "https://gamerch.com/maimai/940254",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ゲームパニック甲府店"
+  },
+  "楽市楽座イオンモール甲府昭和": {
+    "address": "山梨県中巨摩郡昭和町飯喰1505-1 イオンモール甲府昭和店 2F",
+    "lat": 35.622814,
+    "lng": 138.522202,
+    "source": "https://gamerch.com/maimai/940254",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: 楽市楽座イオンモール甲府店"
+  },
+  "プレイタウンパル富士吉田": {
+    "address": "山梨県富士吉田市新西原4丁目12-15",
+    "lat": 35.482849,
+    "lng": 138.779587,
+    "source": "https://gamerch.com/maimai/940254",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: プレイタウンパル富士吉田店"
+  },
+  "アピナ飯田": {
+    "address": "長野県飯田市座光寺3728-1",
+    "lat": 35.53001,
+    "lng": 137.859665,
+    "source": "https://gamerch.com/maimai/940732",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: アピナ飯田店"
+  },
+  "アピナ豊橋": {
+    "address": "愛知県豊橋市藤沢町141ホリデイ・スクエアAM棟1階",
+    "lat": 34.743671,
+    "lng": 137.37175,
+    "source": "https://gamerch.com/maimai/534004",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: アピナ豊橋"
+  },
+  "アピナ名古屋栄": {
+    "address": "愛知県名古屋市中区錦3‐17‐15ドン・キホーテ栄本店 B3F",
+    "lat": 35.170097,
+    "lng": 136.90657,
+    "source": "https://gamerch.com/maimai/534004",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: アピナ名古屋栄店"
+  },
+  "アミューズファクトリー常滑": {
+    "address": "愛知県常滑市りんくう町2-20-3イオンモール常滑2F",
+    "lat": 34.882442,
+    "lng": 136.826782,
+    "source": "https://gamerch.com/maimai/534004",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: アミューズファクトリー常滑店"
+  },
+  "アミューズメントプラザワイド": {
+    "address": "愛知県東海市名和町二番割上16-2",
+    "lat": 35.064838,
+    "lng": 136.91214,
+    "source": "https://gamerch.com/maimai/534004",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: アミューズメントプラザワイド"
+  },
+  "アミューズメントワールド メトロポリス小牧": {
+    "address": "愛知県小牧市村中新町33",
+    "lat": 35.295303,
+    "lng": 136.904449,
+    "source": "https://gamerch.com/maimai/534004",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: アミューズメントワールドメトロポリス小牧"
+  },
+  "ゲームパニック大須": {
+    "address": "愛知県名古屋市中区大須3-30-93 メガタウンB1F",
+    "lat": 35.159981,
+    "lng": 136.905121,
+    "source": "https://gamerch.com/maimai/534004",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ゲームパニック大須"
+  },
+  "ゲームパニック大高": {
+    "address": "愛知県名古屋市緑区忠治山201番地",
+    "lat": 35.049023,
+    "lng": 136.949158,
+    "source": "https://gamerch.com/maimai/534004",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ゲームパニック大高"
+  },
+  "コムテックスクウェア": {
+    "address": "愛知県名古屋市中区金山1丁目16−8",
+    "lat": 35.144104,
+    "lng": 136.899643,
+    "source": "https://gamerch.com/maimai/534004",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: コムテックスクウェア"
+  },
+  "コムテックタワー": {
+    "address": "愛知県名古屋市中村区名駅4丁目10−20",
+    "lat": 35.169498,
+    "lng": 136.886307,
+    "source": "https://gamerch.com/maimai/534004",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: コムテックタワー"
+  },
+  "タイトーステーション豊田GAZA": {
+    "address": "愛知県豊田市喜多町1−140GAZA3階",
+    "lat": 35.088032,
+    "lng": 137.157684,
+    "source": "https://gamerch.com/maimai/534004",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: タイトーステーション豊田ＧＡＺＡ"
+  },
+  "タイトーステーションフェドラ大須": {
+    "address": "愛知県名古屋市中区大須3丁目30-31萬松寺駐車場ビル1階・2階",
+    "lat": 35.159492,
+    "lng": 136.905884,
+    "source": "https://gamerch.com/maimai/534004",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: タイトーステーション フェドラ大須店"
+  },
+  "豊川メトロポリス": {
+    "address": "愛知県豊川市下長山町上アライ14−1",
+    "lat": 34.80312,
+    "lng": 137.384277,
+    "source": "https://gamerch.com/maimai/534004",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: 豊川メトロポリス"
+  },
+  "名古屋レジャーランド内田橋": {
+    "address": "愛知県名古屋市南区内田橋2-26-22",
+    "lat": 35.113815,
+    "lng": 136.909378,
+    "source": "https://gamerch.com/maimai/534004",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: 名古屋レジャーランド内田橋店"
+  },
+  "ファンタジーウエストタウン西尾": {
+    "address": "愛知県西尾市高畠町3丁目23−9ヴェルサウォーク西尾3階",
+    "lat": 34.863388,
+    "lng": 137.059662,
+    "source": "https://gamerch.com/maimai/534004",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ファンタジーウエストタウン西尾"
+  },
+  "ファンタジープラザ名古屋": {
+    "address": "愛知県名古屋市北区玄馬町234−1ドンキホーテ名古屋本店2階",
+    "lat": 35.226475,
+    "lng": 136.908798,
+    "source": "https://gamerch.com/maimai/534004",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ファンタジープラザ名古屋"
+  },
+  "ポート24八事": {
+    "address": "愛知県名古屋市昭和区広路町北石坂102番地4",
+    "lat": 35.137188,
+    "lng": 136.964066,
+    "source": "https://gamerch.com/maimai/534004",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ポート２４八事店"
+  },
+  "ユーズランド東浦": {
+    "address": "愛知県知多郡東浦町緒川旭13−2イオンモール東浦2F",
+    "lat": 34.982567,
+    "lng": 136.971863,
+    "source": "https://gamerch.com/maimai/534004",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ユーズランド東浦店"
+  },
+  "ラウンドワン千種": {
+    "address": "愛知県名古屋市千種区新栄3-20-17タイホウ千種駅前南ビル1階",
+    "lat": 35.167881,
+    "lng": 136.927628,
+    "source": "https://gamerch.com/maimai/534004",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ラウンドワン千種店"
+  },
+  "ラウンドワン鳴海": {
+    "address": "愛知県名古屋市緑区鳴海町杜若28",
+    "lat": 35.099018,
+    "lng": 136.951996,
+    "source": "https://gamerch.com/maimai/534004",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ラウンドワン鳴海店"
+  },
+  "ADXマミー岡崎": {
+    "address": "愛知県岡崎市井田新町6−1",
+    "lat": 34.976818,
+    "lng": 137.162155,
+    "source": "https://gamerch.com/maimai/534004",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ＡＤＸマミー岡崎店"
+  },
+  "MIRAINOイオンモール豊川": {
+    "address": "愛知県豊川市白鳥町兎足1丁目16 イオンモール豊川3階",
+    "lat": 34.8255,
+    "lng": 137.354095,
+    "source": "https://gamerch.com/maimai/534004",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ＭＩＲＡＩＮＯイオンモール豊川店"
+  },
+  "M'sPARK刈谷": {
+    "address": "愛知県刈谷市稲場町3−206",
+    "lat": 35.005165,
+    "lng": 137.001404,
+    "source": "https://gamerch.com/maimai/534004",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: M's PARK刈谷店"
+  },
+  "M'sPARK豊田": {
+    "address": "愛知県豊田市寿町3−21、22",
+    "lat": 35.055214,
+    "lng": 137.140732,
+    "source": "https://gamerch.com/maimai/534004",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: M's PARK豊田店"
+  },
+  "namcoイオンモール長久手１号": {
+    "address": "愛知県長久手市勝入塚501 イオンモール長久手3F",
+    "lat": 35.173092,
+    "lng": 137.050339,
+    "source": "https://gamerch.com/maimai/534004",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ｎａｍｃｏイオンモール長久手"
+  },
+  "namcoイオンモール長久手２号": {
+    "address": "愛知県長久手市勝入塚501 イオンモール長久手3F",
+    "lat": 35.173092,
+    "lng": 137.050339,
+    "source": "https://gamerch.com/maimai/534004",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ｎａｍｃｏイオンモール長久手"
+  },
+  "アソビックスゲームワールド": {
+    "address": "三重県三重郡朝日町小向181アソビックスあさひ内",
+    "lat": 35.030987,
+    "lng": 136.673569,
+    "source": "https://gamerch.com/maimai/533976",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: アソビックスゲームワールド"
+  },
+  "アピナ鈴鹿": {
+    "address": "三重県鈴鹿市庄野羽山4-20-1イオンタウン鈴鹿2階",
+    "lat": 34.873783,
+    "lng": 136.529099,
+    "source": "https://gamerch.com/maimai/533976",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: アピナ鈴鹿店"
+  },
+  "ドリームキャンディー": {
+    "address": "三重県伊賀市小田町711−1",
+    "lat": 34.774185,
+    "lng": 136.119156,
+    "source": "https://gamerch.com/maimai/533976",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ドリームキャンディ"
+  },
+  "楽市楽座イオンモール東員": {
+    "address": "三重県員弁郡東員町大字長深字築田510−1イオンモール東員3F",
+    "lat": 35.061817,
+    "lng": 136.57991,
+    "source": "https://gamerch.com/maimai/533976",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: 楽市楽座イオンモール東員店"
+  },
+  "アミパラ草津": {
+    "address": "滋賀県草津市木川町72",
+    "lat": 35.019493,
+    "lng": 135.942703,
+    "source": "https://gamerch.com/maimai/534310",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: アミパラ草津店"
+  },
+  "エースレーン近江八幡": {
+    "address": "滋賀県近江八幡市出町736アクトビル1F",
+    "lat": 35.132076,
+    "lng": 136.102371,
+    "source": "https://gamerch.com/maimai/534310",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: エースレーン近江八幡店"
+  },
+  "エースレーン守山": {
+    "address": "滋賀県守山市播磨田町231-4ACT守山3番館内",
+    "lat": 35.067699,
+    "lng": 135.995209,
+    "source": "https://gamerch.com/maimai/534310",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: エースレーン守山"
+  },
+  "ゲームランド草津": {
+    "address": "滋賀県草津市新浜町300イオンモール草津3階",
+    "lat": 34.99818,
+    "lng": 135.912125,
+    "source": "https://gamerch.com/maimai/534310",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ゲームランド草津"
+  },
+  "滋賀レジャーランド大津": {
+    "address": "滋賀県大津市におの浜3-1-43イオンタウンアヤハプラザ内",
+    "lat": 35.003853,
+    "lng": 135.88356,
+    "source": "https://gamerch.com/maimai/534310",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: 滋賀レジャーランド大津店"
+  },
+  "ふぇすたらんど守山": {
+    "address": "滋賀県守山市播磨田町185-1モリーブ守山2F ゲームコーナー",
+    "lat": 35.066067,
+    "lng": 135.995178,
+    "source": "https://gamerch.com/maimai/534310",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ふぇすたらんど守山店"
+  },
+  "アミューズメントCUE京都円町": {
+    "address": "京都府京都市中京区西ノ京西円町40キング西円町店 2階",
+    "lat": 35.01899,
+    "lng": 135.731125,
+    "source": "https://gamerch.com/maimai/534478",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: アミューズメントCUE京都円町店"
+  },
+  "パルケ上賀茂": {
+    "address": "京都府京都市北区上賀茂西河原1-1MKボウル上賀茂4階",
+    "lat": 35.066193,
+    "lng": 135.746857,
+    "source": "https://gamerch.com/maimai/534478",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: パルケ上賀茂店"
+  },
+  "バンダイナムコ Cross Store 京都": {
+    "address": "京都府京都市南区西九条鳥居口町1イオンモールKYOTO SAKURA館4階",
+    "lat": 34.982719,
+    "lng": 135.754532,
+    "source": "https://gamerch.com/maimai/534478",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: バンダイナムコ Cross Store 京都"
+  },
+  "プラサカプコン京都": {
+    "address": "京都府京都市右京区西院追分町25-1イオンモール京都五条3F",
+    "lat": 34.997326,
+    "lng": 135.727249,
+    "source": "https://gamerch.com/maimai/534478",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: プラサカプコン京都店"
+  },
+  "プレイランド京都": {
+    "address": "京都府京都市右京区山ノ内池尻町1-1京都ファミリー3F",
+    "lat": 35.004738,
+    "lng": 135.720474,
+    "source": "https://gamerch.com/maimai/534478",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: プレイランド京都店"
+  },
+  "あそVIVA阪急茨木": {
+    "address": "大阪府茨木市永代町6-2スポーツプラザ茨木2F",
+    "lat": 34.817898,
+    "lng": 135.576157,
+    "source": "https://gamerch.com/maimai/534480",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: あそVIVA阪急茨木店"
+  },
+  "アミパラ光明池": {
+    "address": "大阪府和泉市室堂町824-36コムボックス光明池2階",
+    "lat": 34.468456,
+    "lng": 135.474014,
+    "source": "https://gamerch.com/maimai/534480",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: アミパラ光明池店"
+  },
+  "アミパラ大東": {
+    "address": "大阪府大東市南新田2丁目3番5号",
+    "lat": 34.700386,
+    "lng": 135.638107,
+    "source": "https://gamerch.com/maimai/534480",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: アミパラ大東店"
+  },
+  "関大前フタバボウル": {
+    "address": "大阪府吹田市千里山東1-7-18",
+    "lat": 34.772957,
+    "lng": 135.505981,
+    "source": "https://gamerch.com/maimai/534480",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: 関大前フタバボウル"
+  },
+  "ゲームフェイス八尾": {
+    "address": "大阪府八尾市天王寺屋2-68ボウルアロー八尾店内",
+    "lat": 34.603951,
+    "lng": 135.612473,
+    "source": "https://gamerch.com/maimai/534480",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ゲームフェイス八尾店"
+  },
+  "タイトーステーション難波": {
+    "address": "大阪府大阪市中央区難波千日前15-12",
+    "lat": 34.663303,
+    "lng": 135.503189,
+    "source": "https://gamerch.com/maimai/534479",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: タイトーステーション 難波店"
+  },
+  "トップラン東大阪": {
+    "address": "大阪府東大阪市東鴻池町1-6-30イオンタウン東大阪店2F",
+    "lat": 34.693275,
+    "lng": 135.618057,
+    "source": "https://gamerch.com/maimai/534480",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ゲームセンタートップラン東大阪店"
+  },
+  "バンダイナムコ Cross Store イオンモール大日": {
+    "address": "大阪府守口市大日東町1番地18号イオンモール大日4階",
+    "lat": 34.748852,
+    "lng": 135.580353,
+    "source": "https://gamerch.com/maimai/534480",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: バンダイナムコ Cross Store イオンモール大日店"
+  },
+  "ラウンドワン梅田": {
+    "address": "大阪府大阪市北区小松原町4-16梅田ナナイロビル5~13F",
+    "lat": 34.703281,
+    "lng": 135.500732,
+    "source": "https://gamerch.com/maimai/534479",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ラウンドワン梅田店"
+  },
+  "ラウンドワン岸和田": {
+    "address": "大阪府岸和田市八阪町2-11-1",
+    "lat": 34.456573,
+    "lng": 135.388123,
+    "source": "https://gamerch.com/maimai/534480",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ラウンドワン岸和田店"
+  },
+  "ラウンドワン豊中": {
+    "address": "大阪府豊中市名神口1-1-1",
+    "lat": 34.757328,
+    "lng": 135.465225,
+    "source": "https://gamerch.com/maimai/534480",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ラウンドワン豊中店"
+  },
+  "ラウンドワン東大阪": {
+    "address": "大阪府東大阪市若江南町1-2-12",
+    "lat": 34.652988,
+    "lng": 135.606888,
+    "source": "https://gamerch.com/maimai/534480",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ラウンドワン東大阪店"
+  },
+  "ラウンドワン東淀川": {
+    "address": "大阪府大阪市東淀川区菅原7-14-28",
+    "lat": 34.742702,
+    "lng": 135.525513,
+    "source": "https://gamerch.com/maimai/534479",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ラウンドワン東淀川店"
+  },
+  "ラウンドワン守口": {
+    "address": "大阪府守口市佐太東町2-6-14ジャガーグリーン2F",
+    "lat": 34.757271,
+    "lng": 135.587967,
+    "source": "https://gamerch.com/maimai/534480",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ラウンドワン守口店"
+  },
+  "楽市楽座イオンモール大阪ドーム": {
+    "address": "大阪府大阪市西区千代崎3-13-1イオンモール大阪ドームシティ4F",
+    "lat": 34.669487,
+    "lng": 135.477341,
+    "source": "https://gamerch.com/maimai/534479",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: 楽市楽座イオンモール大阪ドーム店"
+  },
+  "Feedy Diner & Arcade 茨木": {
+    "address": "大阪府茨木市松ケ本町8-30-5イオンモール茨木4F",
+    "lat": 34.811398,
+    "lng": 135.557831,
+    "source": "https://gamerch.com/maimai/534480",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: Feedy Diner&Arcade茨木店"
+  },
+  "GiGO あべのアポロ３Ｆ": {
+    "address": "大阪府大阪市阿倍野区阿倍野筋1-5-31アポロビル3F/4F",
+    "lat": 34.646694,
+    "lng": 135.511368,
+    "source": "https://gamerch.com/maimai/534479",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: GiGOあべのアポロ3F/4F"
+  },
+  "YAZ寝屋川": {
+    "address": "大阪府寝屋川市石津中町25-26",
+    "lat": 34.78038,
+    "lng": 135.618896,
+    "source": "https://gamerch.com/maimai/534480",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ＹＡＺ寝屋川店"
+  },
+  "アピナ姫路": {
+    "address": "兵庫県姫路市東郷町1454-3姫路リオス2階",
+    "lat": 34.827133,
+    "lng": 134.715469,
+    "source": "https://gamerch.com/maimai/534481",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: アピナ姫路店"
+  },
+  "アミパラ加古川": {
+    "address": "兵庫県加古川市尾上町今福71-2",
+    "lat": 34.750507,
+    "lng": 134.827026,
+    "source": "https://gamerch.com/maimai/534481",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: アミパラ加古川店"
+  },
+  "アミパラ垂水": {
+    "address": "兵庫県神戸市垂水区名谷町字室山1400-18",
+    "lat": 34.660774,
+    "lng": 135.06572,
+    "source": "https://gamerch.com/maimai/534481",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: アミパラ垂水店"
+  },
+  "ゲームアイビス太子": {
+    "address": "兵庫県揖保郡太子町太田2149",
+    "lat": 34.836349,
+    "lng": 134.605865,
+    "source": "https://gamerch.com/maimai/534481",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ゲームアイビス太子店"
+  },
+  "ジョイプラザ豊岡": {
+    "address": "兵庫県豊岡市加広町7-32コープデイズ豊岡2F",
+    "lat": 35.550503,
+    "lng": 134.815567,
+    "source": "https://gamerch.com/maimai/534481",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ジョイプラザ豊岡店"
+  },
+  "テクモピア伊丹": {
+    "address": "兵庫県伊丹市藤ノ木1-1-1イオンモール伊丹3F",
+    "lat": 34.781769,
+    "lng": 135.423691,
+    "source": "https://gamerch.com/maimai/534481",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: テクモピア伊丹"
+  },
+  "ハローズガーデン新三田": {
+    "address": "兵庫県三田市けやき台1-6-4イオン三田ウッディタウン店2番街",
+    "lat": 34.907997,
+    "lng": 135.186249,
+    "source": "https://gamerch.com/maimai/534481",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ハローズガーデン新三田店"
+  },
+  "ふぇすたらんど広畑": {
+    "address": "兵庫県姫路市広畑区吾妻町3-29-2マルナカ広畑店2階",
+    "lat": 34.796593,
+    "lng": 134.619705,
+    "source": "https://gamerch.com/maimai/534481",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ふぇすたらんど広畑店"
+  },
+  "ラウンドワン伊丹": {
+    "address": "兵庫県伊丹市昆陽7丁目29",
+    "lat": 34.779106,
+    "lng": 135.394073,
+    "source": "https://gamerch.com/maimai/534481",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ラウンドワン伊丹店"
+  },
+  "ラウンドワン加古川": {
+    "address": "兵庫県加古川市尾上町安田325番6号",
+    "lat": 34.74688,
+    "lng": 134.838028,
+    "source": "https://gamerch.com/maimai/534481",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ラウンドワン加古川店"
+  },
+  "ラウンドワン三宮駅前": {
+    "address": "兵庫県神戸市中央区小野柄通6-1-17",
+    "lat": 34.694103,
+    "lng": 135.197266,
+    "source": "https://gamerch.com/maimai/534481",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ラウンドワン三宮駅前店"
+  },
+  "G-pala 花北": {
+    "address": "兵庫県姫路市増位新町1-6ヴィーナスタウン花北2F",
+    "lat": 34.855984,
+    "lng": 134.709457,
+    "source": "https://gamerch.com/maimai/534481",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: Ｇ－ｐａｌａ花北店"
+  },
+  "アミパラ橿原": {
+    "address": "奈良県橿原市十市町1222-1ツインゲート橿原1F",
+    "lat": 34.529278,
+    "lng": 135.796539,
+    "source": "https://gamerch.com/maimai/534482",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: アミパラ橿原店"
+  },
+  "アミューズメントCUE奈良三条": {
+    "address": "奈良県奈良市三条町478-1",
+    "lat": 34.6814,
+    "lng": 135.822189,
+    "source": "https://gamerch.com/maimai/534482",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: アミューズメントCUE奈良三条店"
+  },
+  "キッズサーカス奈良柏木": {
+    "address": "奈良県奈良市柏木町456-1奈良パワーシティ2F",
+    "lat": 34.671234,
+    "lng": 135.79953,
+    "source": "https://gamerch.com/maimai/534482",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: キッズサーカス奈良柏木店"
+  },
+  "アミパラがいな": {
+    "address": "鳥取県米子市日ノ出町1-8-13",
+    "lat": 35.437916,
+    "lng": 133.338959,
+    "source": "https://gamerch.com/maimai/534483",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: アミパラがいな店"
+  },
+  "PALO鳥取": {
+    "address": "鳥取県鳥取市天神町1イオン鳥取店2F",
+    "lat": 35.493439,
+    "lng": 134.221405,
+    "source": "https://gamerch.com/maimai/534483",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ＰＡＬＯ鳥取店"
+  },
+  "アミパラ松江": {
+    "address": "島根県松江市東朝日町203-1",
+    "lat": 35.463676,
+    "lng": 133.074219,
+    "source": "https://gamerch.com/maimai/534484",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: アミパラ松江店"
+  },
+  "you me CIRCUS 出雲": {
+    "address": "島根県出雲市大塚町650-1ゆめタウン出雲店 東館3F",
+    "lat": 35.377205,
+    "lng": 132.754807,
+    "source": "https://gamerch.com/maimai/534484",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ｙｏｕｍｅ ＣＩＲＣＵＳ出雲店"
+  },
+  "アミパラ岡山": {
+    "address": "岡山県岡山市北区青江1丁目13-8",
+    "lat": 34.636238,
+    "lng": 133.920547,
+    "source": "https://gamerch.com/maimai/533571",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: アミパラ岡山店"
+  },
+  "アミパラ倉敷": {
+    "address": "岡山県倉敷市西中新田624-1",
+    "lat": 34.58366,
+    "lng": 133.77153,
+    "source": "https://gamerch.com/maimai/533571",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: アミパラ倉敷店"
+  },
+  "アミパラ津山": {
+    "address": "岡山県津山市河辺1000-1イオンモール津山2F",
+    "lat": 35.05909,
+    "lng": 134.051727,
+    "source": "https://gamerch.com/maimai/533571",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: アミパラ津山店"
+  },
+  "岡山ヤングボウル": {
+    "address": "岡山県岡山市北区北長瀬表町3-3-20",
+    "lat": 34.648815,
+    "lng": 133.884781,
+    "source": "https://gamerch.com/maimai/533571",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: 岡山ヤングボウル"
+  },
+  "ふぇすたらんど倉敷マスカット": {
+    "address": "岡山県倉敷市松島1163-2 山陽マルナカマスカット店別館3階",
+    "lat": 34.63129,
+    "lng": 133.813461,
+    "source": "https://gamerch.com/maimai/533571",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ふぇすたらんど倉敷マスカット店"
+  },
+  "ふぇすたらんど平島": {
+    "address": "岡山県岡山市東区東平島1609(山陽マルナカ平島店内)",
+    "lat": 34.708008,
+    "lng": 134.050507,
+    "source": "https://gamerch.com/maimai/533571",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ふぇすたらんど平島店"
+  },
+  "ユーズランド倉敷": {
+    "address": "岡山県倉敷市水江1番地イオンモール倉敷2F",
+    "lat": 34.601658,
+    "lng": 133.744385,
+    "source": "https://gamerch.com/maimai/533571",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ユーズランド倉敷店"
+  },
+  "アミパラ神辺": {
+    "address": "広島県福山市神辺町大字新道上字1-2-1",
+    "lat": 34.546432,
+    "lng": 133.358475,
+    "source": "https://gamerch.com/maimai/533574",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: アミパラ神辺店"
+  },
+  "アミパラ広島": {
+    "address": "広島県広島市西区西観音町3-17",
+    "lat": 34.393681,
+    "lng": 132.436142,
+    "source": "https://gamerch.com/maimai/533574",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: アミパラ広島店"
+  },
+  "タイトーステーション広島紙屋町": {
+    "address": "広島県広島市中区紙屋町2-2-21",
+    "lat": 34.393951,
+    "lng": 132.456009,
+    "source": "https://gamerch.com/maimai/533574",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: タイトーステーション 広島紙屋町店"
+  },
+  "ふぇすたらんど五日市": {
+    "address": "広島県広島市佐伯区八幡1-24-17 サンリブ五日市店内",
+    "lat": 34.386238,
+    "lng": 132.359177,
+    "source": "https://gamerch.com/maimai/533574",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ふぇすたらんど五日市店"
+  },
+  "ふぇすたらんど可部": {
+    "address": "広島県広島市安佐北区可部7-4-13マルナカ可部店内",
+    "lat": 34.52264,
+    "lng": 132.512711,
+    "source": "https://gamerch.com/maimai/533574",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ふぇすたらんど可部"
+  },
+  "ふぇすたらんど広": {
+    "address": "広島県呉市広本町2丁目17−1 イオン広店4階",
+    "lat": 34.233856,
+    "lng": 132.623001,
+    "source": "https://gamerch.com/maimai/533574",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ふぇすたらんど広店"
+  },
+  "ラウンドワン広島": {
+    "address": "広島県広島市中区立町3-11",
+    "lat": 34.39341,
+    "lng": 132.459961,
+    "source": "https://gamerch.com/maimai/533574",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ラウンドワン広島店"
+  },
+  "ラウンドワン福山": {
+    "address": "広島県福山市明神町一丁目9番28号",
+    "lat": 34.488842,
+    "lng": 133.392761,
+    "source": "https://gamerch.com/maimai/533574",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ラウンドワン福山店"
+  },
+  "楽市楽座広島": {
+    "address": "広島県広島市南区段原南1-3-52 広島段原ショッピングセンター7F",
+    "lat": 34.385899,
+    "lng": 132.4758,
+    "source": "https://gamerch.com/maimai/533574",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: 楽市楽座広島店"
+  },
+  "アミパラ下関駅南": {
+    "address": "山口県下関市東大和町1丁目3ー15",
+    "lat": 33.945213,
+    "lng": 130.921051,
+    "source": "https://gamerch.com/maimai/534060",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: アミパラ下関駅南店"
+  },
+  "アミパラ下関長府": {
+    "address": "山口県下関市長府才川1‐42‐48",
+    "lat": 34.025414,
+    "lng": 131.007095,
+    "source": "https://gamerch.com/maimai/534060",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: アミパラ下関長府店"
+  },
+  "アミパラ周南久米": {
+    "address": "山口県周南市久米中央5-6-1イオンタウン周南久米内",
+    "lat": 34.037701,
+    "lng": 131.843246,
+    "source": "https://gamerch.com/maimai/534060",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: アミパラ周南久米店"
+  },
+  "ゲームスポットSPEED": {
+    "address": "山口県周南市久米3219",
+    "lat": 34.033131,
+    "lng": 131.834229,
+    "source": "https://gamerch.com/maimai/534060",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ＳＰＥＥＤ"
+  },
+  "サープラ山口あそびタウン": {
+    "address": "山口県山口市湯田温泉6-8-3",
+    "lat": 34.164978,
+    "lng": 131.452332,
+    "source": "https://gamerch.com/maimai/534060",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: サープラ山口あそびタウン"
+  },
+  "フレスパランドカッタの湯": {
+    "address": "山口県宇部市海南町1675",
+    "lat": 33.958115,
+    "lng": 131.262741,
+    "source": "https://gamerch.com/maimai/534060",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: フレスパランドカッタの湯"
+  },
+  "ゆめシティゆめパーク": {
+    "address": "山口県下関市伊倉新町3-1-1ゆめシティ3F",
+    "lat": 34.007175,
+    "lng": 130.935349,
+    "source": "https://gamerch.com/maimai/534060",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ゆめシティ ゆめパーク"
+  },
+  "アミパラ高松": {
+    "address": "香川県高松市伏石町2168-2",
+    "lat": 34.307041,
+    "lng": 134.059174,
+    "source": "https://gamerch.com/maimai/933861",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: アミパラ高松店"
+  },
+  "マックスプラザ善通寺": {
+    "address": "香川県善通寺市中村町1798-2",
+    "lat": 34.243603,
+    "lng": 133.764069,
+    "source": "https://gamerch.com/maimai/933861",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: マックスプラザ善通寺店"
+  },
+  "ラウンドワンスタジアム高松": {
+    "address": "香川県高松市松島町2-7-43",
+    "lat": 34.339165,
+    "lng": 134.066605,
+    "source": "https://gamerch.com/maimai/933861",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ラウンドワンスタジアム高松店"
+  },
+  "アミパラ松山": {
+    "address": "愛媛県松山市生石町655-1",
+    "lat": 33.833069,
+    "lng": 132.74231,
+    "source": "https://gamerch.com/maimai/933873",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: アミパラ松山店"
+  },
+  "アミューズメントパークMG キスケ": {
+    "address": "愛媛県松山市宮田町4 キスケボックス内1階",
+    "lat": 33.841301,
+    "lng": 132.752914,
+    "source": "https://gamerch.com/maimai/933873",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: アミューズメントパークMGキスケ店"
+  },
+  "アミューズメントパークMG 大街道": {
+    "address": "愛媛県松山市大街道1-4-17",
+    "lat": 33.837395,
+    "lng": 132.769821,
+    "source": "https://gamerch.com/maimai/933873",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: アミューズメントパークMG大街道店"
+  },
+  "ふぇすたらんど新居浜": {
+    "address": "愛媛県新居浜市上泉町12-1マルナカ新居浜本店 2階",
+    "lat": 33.937145,
+    "lng": 133.309784,
+    "source": "https://gamerch.com/maimai/933873",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ふぇすたらんど新居浜店"
+  },
+  "楽市楽座イオンモール今治": {
+    "address": "愛媛県今治市にぎわい広場1-1イオンモール今治新都市 2階",
+    "lat": 34.044254,
+    "lng": 132.962463,
+    "source": "https://gamerch.com/maimai/933873",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: 楽市楽座イオンモール今治店"
+  },
+  "アミパラ高知": {
+    "address": "高知県南国市篠原194-1",
+    "lat": 33.568665,
+    "lng": 133.634689,
+    "source": "https://gamerch.com/maimai/933742",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: アミパラ高知店"
+  },
+  "ウェアハウス四万十": {
+    "address": "高知県四万十市右山五月町8-13 アピアさつき2階",
+    "lat": 32.987419,
+    "lng": 132.939575,
+    "source": "https://gamerch.com/maimai/933742",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ウェアハウス四万十店"
+  },
+  "ラウンドワン高知": {
+    "address": "高知県高知市南宝永町4-12",
+    "lat": 33.557861,
+    "lng": 133.554703,
+    "source": "https://gamerch.com/maimai/933742",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ラウンドワン高知店"
+  },
+  "ゲーム最後の５ドル": {
+    "address": "福岡県糟屋郡粕屋町仲原2706仲原ファミリープラザ2F",
+    "lat": 33.609741,
+    "lng": 130.446457,
+    "source": "https://gamerch.com/maimai/533397",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: 最後の５ドル"
+  },
+  "ハイパーメッセ": {
+    "address": "福岡県北九州市小倉南区北方4-6-7",
+    "lat": 33.83894,
+    "lng": 130.874405,
+    "source": "https://gamerch.com/maimai/533397",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ハイパーメッセ"
+  },
+  "パスカランド大川": {
+    "address": "福岡県大川市 大字 上巻字野口430-1",
+    "lat": 33.202881,
+    "lng": 130.388031,
+    "source": "https://gamerch.com/maimai/533397",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: パスカランド大川店"
+  },
+  "パスカランド大牟田": {
+    "address": "福岡県大牟田市旭町2丁目28-1",
+    "lat": 33.036034,
+    "lng": 130.452225,
+    "source": "https://gamerch.com/maimai/533397",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: パスカランド大牟田店"
+  },
+  "パスカランド黒崎": {
+    "address": "福岡県北九州市八幡西区西曲里町3-1",
+    "lat": 33.86002,
+    "lng": 130.761459,
+    "source": "https://gamerch.com/maimai/533397",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: パスカランド黒崎店"
+  },
+  "パスカランド博多": {
+    "address": "福岡県福岡市東区東浜1-1-1ゆめタウン博多店2階",
+    "lat": 33.61153,
+    "lng": 130.412064,
+    "source": "https://gamerch.com/maimai/533397",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: パスカランド博多店"
+  },
+  "パスカランド福重": {
+    "address": "福岡県福岡市西区拾六町1丁目7番1号MEGAドンキ福重店3F",
+    "lat": 33.567913,
+    "lng": 130.315277,
+    "source": "https://gamerch.com/maimai/533397",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: パスカランド福重店"
+  },
+  "ふぇすたらんど久留米": {
+    "address": "福岡県久留米市野中町1411-1",
+    "lat": 33.303326,
+    "lng": 130.530045,
+    "source": "https://gamerch.com/maimai/533397",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ふぇすたらんど久留米店"
+  },
+  "ふぇすたらんど古賀": {
+    "address": "福岡県古賀市天神2-5-1",
+    "lat": 33.734516,
+    "lng": 130.466248,
+    "source": "https://gamerch.com/maimai/533397",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ふぇすたらんど古賀店"
+  },
+  "ふぇすたらんど田川": {
+    "address": "福岡県田川市大字川宮1693-1",
+    "lat": 33.642696,
+    "lng": 130.793777,
+    "source": "https://gamerch.com/maimai/533397",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ふぇすたらんど田川店"
+  },
+  "楽市楽座イオンモール福津": {
+    "address": "福岡県福津市日蒔野6丁目16ー1イオンモール福津店3階",
+    "lat": 33.753025,
+    "lng": 130.492828,
+    "source": "https://gamerch.com/maimai/533397",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: 楽市楽座イオンモール福津店"
+  },
+  "楽市楽座黒崎": {
+    "address": "福岡県北九州市八幡西区桜ヶ丘町1-3フレスポ黒崎2階",
+    "lat": 33.865314,
+    "lng": 130.756851,
+    "source": "https://gamerch.com/maimai/533397",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: 楽市楽座黒崎店"
+  },
+  "楽市楽座砂津": {
+    "address": "福岡県北九州市小倉北区砂津3-1-1チャチャタウン小倉B棟3F",
+    "lat": 33.882893,
+    "lng": 130.888092,
+    "source": "https://gamerch.com/maimai/533397",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: 楽市楽座砂津店"
+  },
+  "楽市楽座行橋": {
+    "address": "福岡県行橋市西泉6−1−1",
+    "lat": 33.715389,
+    "lng": 130.970154,
+    "source": "https://gamerch.com/maimai/533397",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: 楽市楽座行橋店"
+  },
+  "楽市楽座210久留米": {
+    "address": "福岡県久留米市東合川2-2-1 2階",
+    "lat": 33.320515,
+    "lng": 130.545654,
+    "source": "https://gamerch.com/maimai/533397",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: 楽市楽座210久留米店"
+  },
+  "G-pala 小倉": {
+    "address": "福岡県北九州市小倉南区上葛原1-14-1",
+    "lat": 33.839718,
+    "lng": 130.910507,
+    "source": "https://gamerch.com/maimai/533397",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: G-pala小倉"
+  },
+  "遊道楽嘉瀬": {
+    "address": "佐賀県佐賀市嘉瀬町中原2488-1",
+    "lat": 33.241287,
+    "lng": 130.256577,
+    "source": "https://gamerch.com/maimai/533534",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: 遊道楽嘉瀬店"
+  },
+  "パスカランド鳥栖": {
+    "address": "佐賀県鳥栖市本鳥栖町537-1",
+    "lat": 33.377193,
+    "lng": 130.517654,
+    "source": "https://gamerch.com/maimai/533534",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: パスカランド鳥栖"
+  },
+  "アソビクル長崎戸町": {
+    "address": "長崎県長崎市戸町4ー9ー3",
+    "lat": 32.721344,
+    "lng": 129.860641,
+    "source": "https://gamerch.com/maimai/534218",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: アソビクル長崎戸町店"
+  },
+  "アミパラ佐世保": {
+    "address": "長崎県佐世保市大塔町18-15",
+    "lat": 33.149872,
+    "lng": 129.779892,
+    "source": "https://gamerch.com/maimai/534218",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: アミパラ佐世保店"
+  },
+  "三冠王バッティングセンター": {
+    "address": "長崎県佐世保市相浦町2689-1",
+    "lat": 33.19096,
+    "lng": 129.652832,
+    "source": "https://gamerch.com/maimai/534218",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: 三冠王バッティングセンター"
+  },
+  "ソニックワールド大村": {
+    "address": "長崎県大村市古賀島町383-1",
+    "lat": 32.928024,
+    "lng": 129.938828,
+    "source": "https://gamerch.com/maimai/534218",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ソニックワールド大村店"
+  },
+  "ファンタジーランド五島": {
+    "address": "長崎県五島市吉久木町731番地五島シティモール 2F",
+    "lat": 32.695667,
+    "lng": 128.81398,
+    "source": "https://gamerch.com/maimai/534218",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ファンタジーランド五島"
+  },
+  "G-pala 時津": {
+    "address": "長崎県西彼杵郡時津町野田郷59号",
+    "lat": 32.823093,
+    "lng": 129.841324,
+    "source": "https://gamerch.com/maimai/534218",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: Ｇ－ｐａｌａ時津店"
+  },
+  "サープラ下通あそびタウン": {
+    "address": "熊本県熊本市中央区手取本町4番12号 ファインビル2F・地下1F",
+    "lat": 32.802574,
+    "lng": 130.709427,
+    "source": "https://gamerch.com/maimai/534091",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: サープラ下通あそびタウン"
+  },
+  "パスカランド長嶺": {
+    "address": "熊本県熊本市東区長嶺西1-5-1 シュロアモール長嶺店内",
+    "lat": 32.810551,
+    "lng": 130.763138,
+    "source": "https://gamerch.com/maimai/534091",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: パスカランド長嶺店"
+  },
+  "パスカランドはません": {
+    "address": "熊本県熊本市南区田井島1-2-1 ゆめタウンはません 3F",
+    "lat": 32.773132,
+    "lng": 130.723999,
+    "source": "https://gamerch.com/maimai/534091",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: パスカランドはません店"
+  },
+  "ピノキオランド本渡": {
+    "address": "熊本県天草市船之尾町279-6 スーパーセンタータイヨー リンドマール店 3F",
+    "lat": 32.458565,
+    "lng": 130.184357,
+    "source": "https://gamerch.com/maimai/534091",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ピノキオランド本渡店"
+  },
+  "ふぇすたらんど菊陽": {
+    "address": "熊本県菊池郡菊陽町大字津久礼2422番地4 サンリーカリーノ菊陽2階",
+    "lat": 32.859783,
+    "lng": 130.802231,
+    "source": "https://gamerch.com/maimai/534091",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ふぇすたらんど菊陽店"
+  },
+  "楽市楽座小川": {
+    "address": "熊本県宇城市小川町河江1-1 イオンモール宇城 サウスランド屋外",
+    "lat": 32.594955,
+    "lng": 130.705338,
+    "source": "https://gamerch.com/maimai/534091",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: 楽市楽座小川店"
+  },
+  "FESTA人吉": {
+    "address": "熊本県人吉市宝来町1307-1 HITOYOSHI REX内",
+    "lat": 32.212559,
+    "lng": 130.747452,
+    "source": "https://gamerch.com/maimai/534091",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: FESTA人吉店"
+  },
+  "FESTA山鹿": {
+    "address": "熊本県山鹿市方保田字鳥越3468-1 MrMAX山鹿ショッピングセンター内",
+    "lat": 33.006554,
+    "lng": 130.723312,
+    "source": "https://gamerch.com/maimai/534091",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: FESTA山鹿店"
+  },
+  "トライセン中津": {
+    "address": "大分県中津市下池永67−3",
+    "lat": 33.58733,
+    "lng": 131.214478,
+    "source": "https://gamerch.com/maimai/533584",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: トライセン中津店"
+  },
+  "トライセン萩原": {
+    "address": "大分県大分市萩原4−227−7",
+    "lat": 33.248077,
+    "lng": 131.643112,
+    "source": "https://gamerch.com/maimai/533584",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: トライセン萩原店"
+  },
+  "パスカランド日田": {
+    "address": "大分県日田市大字庄手648番地71 イオンタウン日田ショッピングセンター 専門店棟",
+    "lat": 33.312759,
+    "lng": 130.924973,
+    "source": "https://gamerch.com/maimai/533584",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: パスカランド日田店"
+  },
+  "ユーズランド三光": {
+    "address": "大分県中津市三光佐知1032イオンモール三光2F",
+    "lat": 33.554157,
+    "lng": 131.195282,
+    "source": "https://gamerch.com/maimai/533584",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ユーズランド三光店"
+  },
+  "FESTAコスモタウン佐伯": {
+    "address": "大分県佐伯市鶴岡西町2丁目163番地 コスモタウン佐伯内",
+    "lat": 32.960632,
+    "lng": 131.866898,
+    "source": "https://gamerch.com/maimai/533584",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: FESTAコスモタウン佐伯店"
+  },
+  "FESTAフリーモールわさだ": {
+    "address": "大分県大分市大字木上字鉾手2102番地",
+    "lat": 33.185596,
+    "lng": 131.569763,
+    "source": "https://gamerch.com/maimai/533584",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ＦＥＳＴＡフリーモールわさだ店"
+  },
+  "G-pala 日田": {
+    "address": "大分県日田市友田998-1 アーバンタウン内",
+    "lat": 33.325569,
+    "lng": 130.911621,
+    "source": "https://gamerch.com/maimai/533584",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: Ｇ－ｐａｌａ日田"
+  },
+  "ドリームランド宮崎ナナイロ": {
+    "address": "宮崎県宮崎市橘通西3−10−32宮崎ナナイロ西館3F",
+    "lat": 31.91497,
+    "lng": 131.422348,
+    "source": "https://gamerch.com/maimai/935104",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ドリームランド宮崎ナナイロ"
+  },
+  "ピノキオランド日南": {
+    "address": "宮崎県日南市材木町1 サピア日南ショッピングセンター2F",
+    "lat": 31.587593,
+    "lng": 131.402039,
+    "source": "https://gamerch.com/maimai/935104",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ピノキオランド日南店"
+  },
+  "ゲームセンター電撃ベイサイド": {
+    "address": "鹿児島県鹿児島市浜町2-2",
+    "lat": 31.598942,
+    "lng": 130.56395,
+    "source": "https://gamerch.com/maimai/933290",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ゲームセンター電撃ベイサイド"
+  },
+  "サープラ天文館あそびタウン": {
+    "address": "鹿児島県鹿児島市千日町5-6",
+    "lat": 31.589409,
+    "lng": 130.555939,
+    "source": "https://gamerch.com/maimai/933290",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: サープラ天文館あそびタウン"
+  },
+  "パスカランドかのや": {
+    "address": "鹿児島県鹿屋市白崎町4ー1 イオンかのや3F",
+    "lat": 31.37855,
+    "lng": 130.855545,
+    "source": "https://gamerch.com/maimai/933290",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: パスカランド かのや店"
+  },
+  "マンガ倉庫鹿屋": {
+    "address": "鹿児島県鹿屋市寿8丁目714−2",
+    "lat": 31.386847,
+    "lng": 130.87587,
+    "source": "https://gamerch.com/maimai/933290",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: マンガ倉庫鹿屋店"
+  },
+  "楽市楽座イオンタウン姶良": {
+    "address": "鹿児島県姶良市東餅田336 イオンタウン姶良 東街区2階",
+    "lat": 31.733759,
+    "lng": 130.629471,
+    "source": "https://gamerch.com/maimai/933290",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: 楽市楽座イオンタウン姶良店"
+  },
+  "Amusementcity G-STA": {
+    "address": "鹿児島県薩摩川内市向田本町49番",
+    "lat": 31.81736,
+    "lng": 130.306747,
+    "source": "https://gamerch.com/maimai/933290",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: Amusement City G-STA"
+  },
+  "ラウンドワン沖縄・南風原": {
+    "address": "沖縄県島尻郡南風原町字兼城552番地",
+    "lat": 26.194731,
+    "lng": 127.721352,
+    "source": "https://gamerch.com/maimai/533911",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ラウンドワン沖縄・南風原店"
+  },
+  "Feedy Diner & Arcade 南風原": {
+    "address": "沖縄県島尻郡南風原町字宮平264イオン南風原2階FeedyA",
+    "lat": 26.200636,
+    "lng": 127.737434,
+    "source": "https://gamerch.com/maimai/533911",
+    "memo": "maimai 攻略 wiki（Gamerch）の設置店舗一覧: ＦｅｅｄｙＤｉｎｅｒ＆Ａｒｃａｄｅ南風原"
   }
 }

@@ -212,3 +212,13 @@ body {
 }
 .search-clear:hover { background: #b8aca2; }
 .search-clear[hidden] { display: none; }
+
+/* ヘッダー右側のボタン（周辺検索・一覧） */
+.actions { display: flex; gap: 8px; flex-shrink: 0; }
+.icon-btn { white-space: nowrap; }
+.icon-btn:disabled { cursor: progress; }
+.icon-btn.busy { animation: locate-pulse 1s ease-in-out infinite; }
+@media (max-width: 760px) {
+  .actions { margin-left: auto; }
+  .actions .only-mobile { margin-left: 0; }
+}

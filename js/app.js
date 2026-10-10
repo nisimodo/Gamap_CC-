@@ -95,9 +95,8 @@
   let current = [];
   let distances = null;  // 店舗 id → 距離 (km)。地名検索では地点から、ヒットが少ないときはヒットした店舗からの距離
   let distPrefix = "";
-  function apply(fit) {
-    const raw = $("q").value.trim();
-    const q = norm(raw);
+  // 地方・都道府県・台数・表示の絞り込み条件に合う店舗（地図に出すピン）
+  function filteredBase() {
     const region = $("region").value, pref = $("pref").value;
     const minUnits = +$("units").value, extra = $("extra").value;
     const base = stores.filter(s =>
@@ -105,9 +104,15 @@
       (!pref || s.pref === pref) &&
       (!minUnits || unitsOf(s) >= minUnits) &&
       (!extra || (extra === "store" && s.precision === "store") || (extra === "unknown" && isUnknown(s)) || (extra === "closing" && s.closing)));
+    return { base, mapKey: [region, pref, minUnits, extra].join("|") };
+  }
+
+  function apply(fit) {
+    const raw = $("q").value.trim();
+    const q = norm(raw);
+    const { base, mapKey } = filteredBase();
     // 地図のピンは絞り込み条件（地方・台数など）だけで決め、検索語では減らさない。検索結果は一覧とズームに使う
     const matched = q ? base.filter(s => s._key.includes(q)) : base;
-    const mapKey = [region, pref, minUnits, extra].join("|");
 
     placeReq++;  // 実行中の地名検索の結果は使わない
     distances = null;
@@ -239,21 +244,31 @@
       return;
     }
 
-    // 地点から NEARBY_KM 以内の店舗（最大 NEARBY_MAX 件）。少なければ距離に関係なく近い順に MIN_RESULTS 件
-    const sorted = base.map(s => ({ s, d: map.distance(place.ll, [s.lat, s.lng]) / 1000 })).sort((a, b) => a.d - b.d);
-    const within = sorted.filter(x => x.d <= NEARBY_KM).slice(0, NEARBY_MAX);
-    const near = within.length >= MIN_RESULTS ? within : sorted.slice(0, MIN_RESULTS);
-    distances = new Map(near.map(x => [x.s.id, x.d]));
-    distPrefix = "";
-    showStores(base, near.map(x => x.s), mapKey);
-    setNote(`「${esc(raw)}」を含む店舗はありません。<br>地名「<b>${esc(place.title)}</b>」から${within.length >= MIN_RESULTS ? ` ${NEARBY_KM}km 以内の店舗を近い順に` : `近い順に ${near.length} 店舗を`}表示しています。`);
+    const { near, rangeText } = listNearby(place.ll, base, mapKey);
+    setNote(`「${esc(raw)}」を含む店舗はありません。<br>地名「<b>${esc(place.title)}</b>」から${rangeText}表示しています。`);
 
     placeMarker = L.marker(place.ll, {
       icon: L.divIcon({ className: "", html: '<div class="place-pin"></div>', iconSize: [22, 22], iconAnchor: [11, 22] }),
       zIndexOffset: 1000, interactive: false,
     }).addTo(map);
-    // 地点と近い店舗 3 件が収まるように移動
-    const b = L.latLngBounds([place.ll, ...near.slice(0, 3).map(x => [x.s.lat, x.s.lng])]);
+    flyToNearby(place.ll, near);
+  }
+
+  // 地点から NEARBY_KM 以内の店舗（最大 NEARBY_MAX 件）を距離順に一覧に出す。少なければ距離に関係なく近い順に MIN_RESULTS 件
+  function listNearby(ll, base, mapKey) {
+    const sorted = base.map(s => ({ s, d: map.distance(ll, [s.lat, s.lng]) / 1000 })).sort((a, b) => a.d - b.d);
+    const within = sorted.filter(x => x.d <= NEARBY_KM).slice(0, NEARBY_MAX);
+    const near = within.length >= MIN_RESULTS ? within : sorted.slice(0, MIN_RESULTS);
+    distances = new Map(near.map(x => [x.s.id, x.d]));
+    distPrefix = "";
+    showStores(base, near.map(x => x.s), mapKey);
+    const rangeText = within.length >= MIN_RESULTS ? ` ${NEARBY_KM}km 以内の店舗を近い順に` : `近い順に ${near.length} 店舗を`;
+    return { near, rangeText };
+  }
+
+  // 地点と近い店舗 3 件が収まるように移動
+  function flyToNearby(ll, near) {
+    const b = L.latLngBounds([ll, ...near.slice(0, 3).map(x => [x.s.lat, x.s.lng])]);
     map.flyToBounds(near.length ? b.pad(0.2) : b, { ...fitOptions(near.length ? 15 : 14), duration: 1 });
   }
 
@@ -348,6 +363,14 @@
     else navigator.geolocation.getCurrentPosition(ok, ng, GEO_OPTIONS);
   }
   let me, meAccuracy;
+  // 現在地の青い点（と誤差の円）を表示して、その座標を返す
+  function showMe(p) {
+    const ll = [p.coords.latitude, p.coords.longitude];
+    if (me) map.removeLayer(me).removeLayer(meAccuracy);
+    meAccuracy = L.circle(ll, { radius: p.coords.accuracy, color: "#2f8fd6", weight: 1, fillOpacity: .08, interactive: false }).addTo(map);
+    me = L.circleMarker(ll, { radius: 8, color: "#fff", weight: 3, fillColor: "#2f8fd6", fillOpacity: 1 }).addTo(map).bindTooltip("現在地");
+    return ll;
+  }
   // auto: ページを開いたときの自動取得。失敗しても何も表示せず全国表示のままにする
   function locate(auto) {
     if (!nativeGeo && !navigator.geolocation) {
@@ -359,10 +382,7 @@
       $("locate").classList.remove("busy");
       // 自動取得中にユーザーが検索・店舗選択などで地図を動かしていたら邪魔しない
       if (auto && userMoved) return;
-      const ll = [p.coords.latitude, p.coords.longitude];
-      if (me) map.removeLayer(me).removeLayer(meAccuracy);
-      meAccuracy = L.circle(ll, { radius: p.coords.accuracy, color: "#2f8fd6", weight: 1, fillOpacity: .08, interactive: false }).addTo(map);
-      me = L.circleMarker(ll, { radius: 8, color: "#fff", weight: 3, fillColor: "#2f8fd6", fillOpacity: 1 }).addTo(map).bindTooltip("現在地");
+      const ll = showMe(p);
       if (isMobile()) $("side").classList.remove("open");
       map.flyTo(ll, LOCATE_ZOOM, { duration: 1.2 });
     }, () => {
@@ -374,6 +394,36 @@
   map.on("dragstart zoomstart", () => { userMoved = true; });
   $("locate").addEventListener("click", () => locate(false));
   locate(true);
+
+  // ---------- 周辺検索: 現在地から近い店舗を距離順に一覧に出す ----------
+  function nearbySearch() {
+    if (!nativeGeo && !navigator.geolocation) return alert("このブラウザは現在地取得に対応していません");
+    const btn = $("nearby");
+    btn.classList.add("busy");
+    btn.disabled = true;
+    getPosition(p => {
+      btn.classList.remove("busy");
+      btn.disabled = false;
+      const ll = showMe(p);
+      // 検索語は消して、絞り込み条件（地方・台数など）だけを適用
+      clearTimeout(t);
+      $("q").value = "";
+      syncClear();
+      placeReq++;
+      clearPlace();
+      const { base, mapKey } = filteredBase();
+      const { near, rangeText } = listNearby(ll, base, mapKey);
+      setNote(`<b>現在地</b>から${rangeText}表示しています。`);
+      $("list").scrollTop = 0;
+      if (isMobile()) $("side").classList.add("open");
+      flyToNearby(ll, near);
+    }, () => {
+      btn.classList.remove("busy");
+      btn.disabled = false;
+      alert("現在地を取得できませんでした。位置情報の許可と、端末の位置情報がオンになっているかを確認してください。");
+    });
+  }
+  $("nearby").addEventListener("click", nearbySearch);
 
   $("source").textContent = DATA.source;
   $("generated").textContent = DATA.generated;
